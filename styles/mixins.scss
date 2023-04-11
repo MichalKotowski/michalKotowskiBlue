@@ -1,0 +1,58 @@
+$font: "Montserrat", sans-serif;
+
+@mixin min($min) {
+  @media screen and (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin max($max) {
+  @media screen and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin minmax($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin heading {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 3.5rem;
+  letter-spacing: -0.2px;
+  color: $white;
+}
+
+@mixin buttonLabel {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+  letter-spacing: 0.5px;
+  color: $primaryBlue;
+}
+
+@mixin paragraph {
+  font-size: 1.6rem;
+  line-height: 3.6rem;
+  & > a {
+    font-weight: 600;
+    color: $primaryBlue;
+  }
+}
+
+@mixin pill {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+
+@mixin date {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+
+p {
+  @include paragraph;
+}
