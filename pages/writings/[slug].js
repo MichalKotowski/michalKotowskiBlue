@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
 import ErrorPage from "next/error";
-import Container from "../../components/container";
+import Container from "../../components/Container";
 import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
-import Layout from "../../components/layout";
+import Layout from "../../components/Layout";
 import {
   getAllWritingsWithSlug,
   getWritingAndMoreWritings,
