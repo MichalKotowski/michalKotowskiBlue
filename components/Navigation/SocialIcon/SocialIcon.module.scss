@@ -1,0 +1,53 @@
+.socialButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 4px;
+	background-color: $darkGrey;
+	transition: 0.2s ease-in-out;
+
+	&:not(:last-child) {
+		margin-right: 10px;
+	}
+
+	span {
+		display: inline-block;
+		mask-size: 20px 20px;
+		width: 20px;
+		height: 20px;
+		background-color: $white;
+		opacity: 0.6;
+
+		&.github {
+			mask-image: url('../../../assets/icons/home.svg');
+			mask-size: 20px 19px;
+			height: 19px;
+		}
+
+		&.goodreads {
+			mask-size: 20px 19px;
+			height: 19px;
+			mask-image: url('../../../assets/icons/book.svg');
+		}
+
+		&.chess {
+			mask-image: url('../../../assets/icons/chess.svg');
+		}
+
+		&.email {
+			mask-size: 20px 16px;
+			height: 16px;
+			mask-image: url('../../../assets/icons/email.svg');
+		}
+	}
+
+	&:hover {
+		background-color: $primaryBlue;
+
+		span {
+			opacity: 1;
+		}
+	}
+}

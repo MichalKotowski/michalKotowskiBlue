@@ -1,5 +1,7 @@
-import Home from "./home";
+import Home from '@app/home'
 
-export default function Page() {
-  return <Home />;
+const Page = () => {
+	return <Home />
 }
+
+export default Page

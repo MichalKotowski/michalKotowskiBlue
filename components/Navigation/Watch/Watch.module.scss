@@ -1,0 +1,11 @@
+.watch {
+	@include paragraph;
+
+	align-self: flex-start;
+	color: $primaryBlue;
+	font-weight: 600;
+
+	span {
+		margin-right: 10px;
+	}
+}

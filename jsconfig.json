@@ -1,14 +1,19 @@
 {
-    "compilerOptions": {
-        "module": "ESNext",
-        "moduleResolution": "Node",
-        "target": "ES2020",
-        "jsx": "react",
-        "strictNullChecks": true,
-        "strictFunctionTypes": true
-    },
-    "exclude": [
-        "node_modules",
-        "**/node_modules/*"
-    ]
+	"compilerOptions": {
+		"module": "es2020",
+		"moduleResolution": "Node",
+		"target": "ES2020",
+		"jsx": "react-jsx",
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"checkJs": true,
+		"paths": {
+			"@components/*": ["./components/*"],
+			"@styles/*": ["./styles/*"],
+			"@assets/*": ["./assets/*"],
+			"@app/*": ["./app/*"]
+		}
+	},
+	"require": ["tsconfig-paths/register"],
+	"exclude": ["node_modules", "**/node_modules/*"]
 }
