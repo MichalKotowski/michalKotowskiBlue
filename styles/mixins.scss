@@ -1,5 +1,3 @@
-$font: 'Montserrat', sans-serif;
-
 @mixin min($min) {
 	@media screen and (min-width: $min) {
 		@content;
@@ -31,12 +29,21 @@ $font: 'Montserrat', sans-serif;
 	}
 }
 
-@mixin buttonLabel {
+@mixin secondaryHeading {
 	font-size: 1.6rem;
 	font-weight: 600;
 	line-height: 1.6rem;
 	letter-spacing: 0.5px;
-	color: $primaryBlue;
+	color: $white;
+}
+
+@mixin buttonLabel {
+	font-size: 1.6rem;
+	font-weight: 600;
+	line-height: 1.6rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 
 @mixin paragraph {

@@ -1,0 +1,43 @@
+.button {
+	@include buttonLabel;
+	display: inline-block;
+	color: $white;
+	padding: 9px 40px;
+	border: 3px solid $primaryBlue;
+	border-radius: 12px;
+
+	&.primary {
+		background-color: $primaryBlue;
+		color: $black;
+	}
+
+	&.tertiary {
+		padding: 0;
+		border: none;
+		border-radius: 0;
+
+		.icon {
+			width: 14px;
+			height: 14px;
+			border-radius: 4px;
+			display: inline-block;
+			background-color: $primaryBlue;
+			top: 1px;
+			position: relative;
+			margin-left: 18px;
+
+			span {
+				display: inline-block;
+				mask-size: 7px 10px;
+				width: 7px;
+				height: 10px;
+				mask-image: url('../../assets/icons/arrowRight.svg');
+				background-color: $white;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				position: absolute;
+			}
+		}
+	}
+}

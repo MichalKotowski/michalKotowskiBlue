@@ -1,4 +1,6 @@
 import heroImage from '@assets/images/homepage.jpg'
+import Button from '@components/Button'
+import Writings from '@components/Writings'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -17,6 +19,12 @@ const Home = () => {
 				site serves as a medium in which I can give advice through writing -
 				primarily to myself. 😅
 			</p>
+			<div>
+				<Button type="primary" path="/about" label="About" />
+				<Button type="secondary" path="/writings" label="Writings" />
+				<Button type="tertiary" path="/writings" label="See all" />
+			</div>
+			<Writings displayHeading={true} amount={3} />
 		</>
 	)
 }

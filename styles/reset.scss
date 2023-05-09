@@ -72,6 +72,10 @@ h1 {
 	@include heading;
 }
 
+h2 {
+	@include secondaryHeading;
+}
+
 p {
 	@include paragraph;
 }
