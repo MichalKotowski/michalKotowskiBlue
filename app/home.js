@@ -1,4 +1,4 @@
-import heroImage from '@assets/images/homepage.jpg'
+import heroImage from '@assets/images/homepage.png'
 import Button from '@components/Button'
 import Writings from '@components/Writings'
 import Image from 'next/image'
@@ -7,7 +7,7 @@ import Link from 'next/link'
 const Home = () => {
 	return (
 		<>
-			<Image src={heroImage} alt="Michal Kotowski" />
+			<Image quality={100} src={heroImage} alt="Michal Kotowski" />
 			<h1>
 				I’m <Link href="/about">Michał Kotowski</Link>, a web developer from
 				Warsaw with experience in design, digital, print and brand identity.

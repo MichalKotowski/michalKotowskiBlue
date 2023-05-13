@@ -1,12 +1,25 @@
+'use client'
+
 import Button from '@components/Button'
 import Link from 'next/link'
-import {
-	getAllWritingsWithSlug,
-	getWritingAndMoreWritings,
-} from '../../lib/api'
+import { useEffect, useState } from 'react'
+import { getWritings } from '../../lib/api'
 import styles from './Writings.module.scss'
 
-const Writings = ({ displayHeading, amount }) => {
+const Writings = ({ displayHeading, amount = 3 }) => {
+	const [data, setData] = useState([])
+
+	useEffect(() => {
+		const getData = async () => {
+			const data = await getWritings()
+
+			setData(data)
+			console.log(data)
+		}
+
+		getData()
+	}, [])
+	console.log(data)
 	return (
 		<div className={styles.writings}>
 			{displayHeading === true && (
@@ -21,23 +34,3 @@ const Writings = ({ displayHeading, amount }) => {
 }
 
 export default Writings
-
-export async function getStaticProps({ params, preview = false }) {
-	const data = await getWritingAndMoreWritings(params.slug, preview)
-
-	return {
-		props: {
-			preview,
-			writing: data?.writing ?? null,
-			moreWritings: data?.moreWritings ?? null,
-		},
-	}
-}
-
-export async function getStaticPaths() {
-	const allWritings = await getAllWritingsWithSlug()
-	return {
-		paths: allWritings?.map(({ slug }) => `/writings/${slug}`) ?? [],
-		fallback: true,
-	}
-}
