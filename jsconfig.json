@@ -6,7 +6,7 @@
 		"jsx": "react-jsx",
 		"strictNullChecks": true,
 		"strictFunctionTypes": true,
-		"checkJs": true,
+		"checkJs": false,
 		"paths": {
 			"@components/*": ["./components/*"],
 			"@styles/*": ["./styles/*"],

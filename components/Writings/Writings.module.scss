@@ -2,5 +2,57 @@
 	.heading {
 		display: flex;
 		justify-content: space-between;
+		margin-bottom: 24px;
+	}
+
+	.writing {
+		display: flex;
+
+		&:not(:last-child) {
+			margin-bottom: 18px;
+		}
+
+		.rectangle {
+			width: 16px;
+			height: auto;
+			display: inline-block;
+			border-radius: 4px;
+			background-color: $darkGrey;
+			margin-right: 10px;
+		}
+
+		.content {
+			margin: 4px 0;
+			.languageAndDate {
+				display: flex;
+				align-items: center;
+				margin-bottom: 5px;
+
+				span {
+					display: inline-block;
+					mask-size: 17px 10px;
+					width: 17px;
+					height: 10px;
+					border-radius: 2px;
+					background-image: url('../../assets/icons/english.svg');
+					margin-top: 1px;
+					margin-right: 10px;
+
+					&.polish {
+						background-image: url('../../assets/icons/polish.svg');
+					}
+				}
+
+				p {
+					@include date;
+				}
+			}
+
+			.title {
+				@include secondaryHeading;
+				text-decoration: none;
+				color: $primaryBlue;
+			}
+		}
 	}
 }

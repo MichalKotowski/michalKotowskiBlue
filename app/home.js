@@ -24,7 +24,7 @@ const Home = () => {
 				<Button type="secondary" path="/writings" label="Writings" />
 				<Button type="tertiary" path="/writings" label="See all" />
 			</div>
-			<Writings displayHeading={true} amount={3} />
+			<Writings displayHeading={true} />
 		</>
 	)
 }
