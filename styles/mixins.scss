@@ -60,6 +60,13 @@
 	font-size: 1.2rem;
 	line-height: 1.2rem;
 	font-weight: 600;
+	text-decoration: none;
+}
+
+@mixin largePill {
+	font-size: 1.4rem;
+	line-height: 1.4rem;
+	font-weight: 400;
 }
 
 @mixin date {

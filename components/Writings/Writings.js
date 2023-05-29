@@ -1,6 +1,7 @@
 'use client'
 
 import Button from '@components/Button'
+import Pill from '@components/Pill'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { getWritings } from '../../lib/api'
@@ -47,6 +48,13 @@ const Writings = ({ displayHeading = false, showTags = false, amount = 3 }) => {
 							<Link className={styles.title} href={`/${writing.slug}`}>
 								{writing.title}
 							</Link>
+							{showTags && writing.tags && (
+								<div className={styles.tags}>
+									{writing.tags.map((pill) => (
+										<Pill key={pill} label={pill} />
+									))}
+								</div>
+							)}
 						</div>
 					</div>
 				))}

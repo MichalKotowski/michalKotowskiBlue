@@ -53,6 +53,15 @@
 				text-decoration: none;
 				color: $primaryBlue;
 			}
+
+			.tags {
+				display: flex;
+				margin-top: 10px;
+
+				& > *:not(:last-child) {
+					margin-right: 10px;
+				}
+			}
 		}
 	}
 }
