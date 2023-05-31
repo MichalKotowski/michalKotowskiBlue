@@ -1,0 +1,19 @@
+.spacer {
+	display: block;
+
+	&.small {
+		height: 10px;
+	}
+
+	&.medium {
+		height: 20px;
+	}
+
+	&.large {
+		height: 40px;
+	}
+
+	&.huge {
+		height: 80px;
+	}
+}
