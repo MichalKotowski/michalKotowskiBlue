@@ -64,6 +64,12 @@ h6 {
 	overflow-wrap: break-word;
 }
 
+article {
+	p + p {
+		margin-top: 20px;
+	}
+}
+
 #__next {
 	isolation: isolate;
 }

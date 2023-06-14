@@ -2,6 +2,7 @@
 
 import Button from '@components/Button'
 import Pill from '@components/Pill'
+import Flag from '@components/Flag'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { getWritings } from '../../lib/api'
@@ -36,16 +37,14 @@ const Writings = ({ displayHeading = false, showTags = false, amount = 3 }) => {
 						<div className={styles.rectangle}></div>
 						<div className={styles.content}>
 							<div className={styles.languageAndDate}>
-								<span
-									className={writing.english ? styles.english : styles.polish}
-								></span>
+								<Flag english={writing.english} isSingle={false} />
 								<p>
 									{format(parseISO(writing.date), `dd `)}
 									{romanize(parseISO(writing.date).getMonth() + 1)}
 									{format(parseISO(writing.date), ` y`)}
 								</p>
 							</div>
-							<Link className={styles.title} href={`/${writing.slug}`}>
+							<Link className={styles.title} href={`/writings/${writing.slug}`}>
 								{writing.title}
 							</Link>
 							{showTags && writing.tags && (

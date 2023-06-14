@@ -8,7 +8,7 @@ const Page = () => {
 	return (
 		<>
 			<TotalWritings />
-			<Spacer size="small" />
+			<Spacer />
 			<h1>
 				Whenever I have enough time, I love to share my thoughts about almost
 				everything
