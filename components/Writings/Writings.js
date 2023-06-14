@@ -37,7 +37,7 @@ const Writings = ({ displayHeading = false, showTags = false, amount = 3 }) => {
 						<div className={styles.rectangle}></div>
 						<div className={styles.content}>
 							<div className={styles.languageAndDate}>
-								<Flag english={writing.english} isSingle={false} />
+								<Flag english={writing.english} />
 								<p>
 									{format(parseISO(writing.date), `dd `)}
 									{romanize(parseISO(writing.date).getMonth() + 1)}

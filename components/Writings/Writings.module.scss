@@ -28,21 +28,6 @@
 				align-items: center;
 				margin-bottom: 5px;
 
-				span {
-					display: inline-block;
-					mask-size: 17px 10px;
-					width: 17px;
-					height: 10px;
-					border-radius: 2px;
-					background-image: url('../../assets/icons/english.svg');
-					margin-top: 1px;
-					margin-right: 10px;
-
-					&.polish {
-						background-image: url('../../assets/icons/polish.svg');
-					}
-				}
-
 				p {
 					@include date;
 				}

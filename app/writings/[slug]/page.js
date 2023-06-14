@@ -6,7 +6,8 @@ import { getWritingAndMoreWritings } from '../../../lib/api'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Tags from '@components/Tags'
 import Spacer from '@components/Spacer'
-import Flag from '@components/Spacer'
+import Flag from '@components/Flag'
+import Heading from '@components/Heading'
 
 const Page = () => {
 	const slug = usePathname().replace('/writings/', '')
@@ -28,10 +29,10 @@ const Page = () => {
 
 	return (
 		<>
-			<div>
+			<Heading>
 				<h1>{data.title}</h1>
-				<Flag english={data.english} isSingle={true} />
-			</div>
+				<Flag english={data.english} />
+			</Heading>
 			<Spacer />
 			{data.tags && <Tags elements={data.tags} />}
 			<Spacer size="large" />

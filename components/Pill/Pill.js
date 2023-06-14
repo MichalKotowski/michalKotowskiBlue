@@ -14,12 +14,10 @@ const slugify = (text) => {
 		.replace(/\-$/g, '') // Remove trailing -
 }
 
-const Pill = ({ label }) => {
-	return (
-		<Link className={styles.pill} href={`tags/${slugify(label)}`}>
-			{label}
-		</Link>
-	)
-}
+const Pill = ({ label }) => (
+	<Link className={styles.pill} href={`/tag/${slugify(label)}`}>
+		{label}
+	</Link>
+)
 
 export default Pill

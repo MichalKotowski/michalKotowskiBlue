@@ -7,8 +7,22 @@
 	background-image: url('../../assets/icons/english.svg');
 	margin-top: 1px;
 	margin-right: 10px;
+	position: relative;
 
 	&.polish {
 		background-image: url('../../assets/icons/polish.svg');
+	}
+}
+
+h1 + .flag {
+	&::after {
+		content: '';
+		display: block;
+		height: 20px;
+		width: 27px;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		position: absolute;
 	}
 }
