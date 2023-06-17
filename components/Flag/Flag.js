@@ -1,10 +1,10 @@
 import styles from './Flag.module.scss'
-import Link from 'next/Link'
+import Link from 'next/link'
 
-const Flag = ({ english, isSingle }) => {
+const Flag = ({ english }) => {
 	return (
 		<Link
-			href="/tag/polish"
+			href={`/language/${english ? 'english' : 'polish'}`}
 			className={`${styles.flag} ${!english ? styles.polish : ''}`}
 		></Link>
 	)

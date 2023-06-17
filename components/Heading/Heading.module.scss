@@ -5,4 +5,22 @@
 	h1 + * {
 		margin-left: 20px;
 	}
+
+	&.category {
+		h1:first-child {
+			color: $text;
+		}
+
+		h1 + * {
+			margin: 0 10px;
+		}
+
+		span {
+			width: 2px;
+			height: 24px;
+			background-color: $primaryBlue;
+			position: relative;
+			top: 1px;
+		}
+	}
 }

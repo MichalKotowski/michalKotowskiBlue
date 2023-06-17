@@ -10,12 +10,17 @@ import { parseISO, format } from 'date-fns'
 import { romanize } from 'romans'
 import styles from './Writings.module.scss'
 
-const Writings = ({ displayHeading = false, showTags = false, amount = 3 }) => {
+const Writings = ({
+	displayHeading = false,
+	showTags = false,
+	amount,
+	tag,
+}) => {
 	const [data, setData] = useState([])
 
 	useEffect(() => {
 		const getData = async () => {
-			const data = await getWritings(amount)
+			const data = await getWritings(amount, tag)
 
 			setData(data)
 		}
