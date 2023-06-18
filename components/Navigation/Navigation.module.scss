@@ -1,6 +1,13 @@
 .navigationWrapper {
 	display: flex;
 	flex-direction: column;
+	@include max(1000px) {
+		position: fixed;
+		top: 100%;
+		width: calc(100% - 60px);
+		left: 50%;
+		transform: translateX(-50%);
+	}
 
 	.navigation {
 		display: flex;
