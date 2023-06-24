@@ -1,12 +1,22 @@
 .navigationWrapper {
 	display: flex;
 	flex-direction: column;
-	@include max(1000px) {
+	@include max(980px) {
 		position: fixed;
-		top: 100%;
-		width: calc(100% - 60px);
+		bottom: 60px;
+		width: calc(100% - 40px);
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translate(-50%, 0);
+		z-index: 100;
+		opacity: 0;
+		transition: 0.2s ease-in-out;
+	}
+
+	&.open {
+		@include max(980px) {
+			opacity: 1;
+			transform: translate(-50%, 40px);
+		}
 	}
 
 	.navigation {
@@ -21,5 +31,64 @@
 		align-self: flex-end;
 		display: flex;
 		margin-top: 10px;
+		@include max(980px) {
+			margin-right: 50px;
+		}
+	}
+}
+
+.hamburger {
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	z-index: 100;
+	bottom: 20px;
+	right: 20px;
+	border-radius: 8px;
+	background: rgba(20, 110, 255, 1);
+	backdrop-filter: blur(3px);
+	cursor: pointer;
+
+	span {
+		display: inline-block;
+		mask-size: 20px 21px;
+		width: 20px;
+		height: 20px;
+		mask-image: url('../../assets/icons/hamburger.svg');
+		background-color: $white;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&.open {
+		background: rgba(20, 110, 255, 1);
+		span {
+			mask-image: url('../../assets/icons/close.svg');
+		}
+	}
+
+	@include min(980px) {
+		display: none;
+	}
+}
+
+.overlay {
+	position: fixed;
+	width: 110vw;
+	height: 110vh;
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(3px);
+	z-index: 90;
+	display: block;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 1;
+	transition: 0.2s ease-in-out;
+
+	&.closed {
+		opacity: 0;
 	}
 }

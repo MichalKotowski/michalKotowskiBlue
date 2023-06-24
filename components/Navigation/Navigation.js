@@ -5,26 +5,67 @@ import { useState } from 'react'
 import styles from './Navigation.module.scss'
 
 const Navigation = () => {
-	const [isToggled, setIsToggled] = useState(false)
+	const [isOpen, setIsOpen] = useState(false)
 
 	return (
-		<nav className={styles.navigationWrapper}>
-			<Watch />
-			<div className={styles.navigation}>
-				<NavigationItem path="/" icon="home" label="Home" />
-				<NavigationItem path="/writings" icon="writings" label="Writings" />
-				<NavigationItem path="/about" icon="about" label="About" />
+		<>
+			<nav
+				className={`${styles.navigationWrapper} ${
+					isOpen ? styles.open : styles.closed
+				}`}
+			>
+				<Watch />
+				<div className={styles.navigation}>
+					<NavigationItem
+						path="/"
+						icon="home"
+						label="Home"
+						onClick={() => setIsOpen(false)}
+					/>
+					<NavigationItem
+						path="/writings"
+						icon="writings"
+						label="Writings"
+						onClick={() => setIsOpen(false)}
+					/>
+					<NavigationItem
+						path="/about"
+						icon="about"
+						label="About"
+						onClick={() => setIsOpen(false)}
+					/>
+				</div>
+				<div className={styles.social}>
+					<SocialButton
+						href="https://github.com/MichalKotowski"
+						icon="github"
+					/>
+					<SocialButton
+						href="https://www.goodreads.com/review/list/70574245-micha-kotowski?shelf=read"
+						icon="goodreads"
+					/>
+					<SocialButton
+						href="https://www.chess.com/member/ipisay"
+						icon="chess"
+					/>
+					<SocialButton href="mailto:hello@michalkotowski.pl" icon="email" />
+				</div>
+			</nav>
+			<div
+				className={`${styles.hamburger} ${
+					isOpen ? styles.open : styles.closed
+				}`}
+				onClick={() => setIsOpen(!isOpen)}
+			>
+				<span></span>
 			</div>
-			<div className={styles.social}>
-				<SocialButton href="https://github.com/MichalKotowski" icon="github" />
-				<SocialButton
-					href="https://www.goodreads.com/review/list/70574245-micha-kotowski?shelf=read"
-					icon="goodreads"
-				/>
-				<SocialButton href="https://www.chess.com/member/ipisay" icon="chess" />
-				<SocialButton href="mailto:hello@michalkotowski.pl" icon="email" />
+			<div
+				className={`${styles.overlay} ${isOpen ? styles.open : styles.closed}`}
+				onClick={() => setIsOpen(false)}
+			>
+				<span></span>
 			</div>
-		</nav>
+		</>
 	)
 }
 

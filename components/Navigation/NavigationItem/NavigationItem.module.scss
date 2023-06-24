@@ -56,9 +56,13 @@
 		span {
 			background-color: $primaryBlue;
 			margin-right: 30px;
+			@include max(980px) {
+				background-color: transparent;
+			}
 
 			&::after {
 				opacity: 1;
+				background-color: $primaryBlue;
 			}
 		}
 

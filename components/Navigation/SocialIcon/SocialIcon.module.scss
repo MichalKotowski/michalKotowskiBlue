@@ -43,11 +43,13 @@
 		}
 	}
 
-	&:hover {
-		background-color: $primaryBlue;
+	@include min(980px) {
+		&:hover {
+			background-color: $primaryBlue;
 
-		span {
-			opacity: 1;
+			span {
+				opacity: 1;
+			}
 		}
 	}
 }
