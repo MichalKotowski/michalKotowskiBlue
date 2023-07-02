@@ -62,7 +62,9 @@
 
 			&::after {
 				opacity: 1;
-				background-color: $primaryBlue;
+				@include max(980px) {
+					background-color: $primaryBlue;
+				}
 			}
 		}
 

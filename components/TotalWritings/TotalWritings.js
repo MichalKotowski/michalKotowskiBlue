@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './TotalWritings.module.scss'
 import { useEffect, useState } from 'react'
 import { getWritingsAmount } from '../../lib/api'

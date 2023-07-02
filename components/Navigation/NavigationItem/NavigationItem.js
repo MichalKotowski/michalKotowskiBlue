@@ -4,12 +4,16 @@ import styles from './NavigationItem.module.scss'
 
 const NavigationItem = ({ path, icon, label, onClick }) => {
 	const currentPath = usePathname()
+	const writingTypes = ['/writings', '/tag', '/language']
+	const isWritingType = () =>
+		label === 'Writings' &&
+		writingTypes.some((writingType) => currentPath.startsWith(writingType))
 
 	return (
 		<Link
 			href={path}
 			className={`${styles.navigationItem} ${
-				currentPath === path ? styles.active : ''
+				currentPath === path || isWritingType() ? styles.active : ''
 			}`}
 			onClick={onClick}
 		>

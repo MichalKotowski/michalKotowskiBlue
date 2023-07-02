@@ -8,7 +8,7 @@ const Navigation = () => {
 	const [isOpen, setIsOpen] = useState(false)
 
 	return (
-		<>
+		<div className={styles.navigationContainer}>
 			<nav
 				className={`${styles.navigationWrapper} ${
 					isOpen ? styles.open : styles.closed
@@ -65,7 +65,7 @@ const Navigation = () => {
 			>
 				<span></span>
 			</div>
-		</>
+		</div>
 	)
 }
 

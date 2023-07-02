@@ -7,14 +7,14 @@ import Spacer from '@components/Spacer'
 import Heading from '@components/Heading'
 
 const Page = () => {
-	const tag = usePathname().replace('/tag/', '').replace('-', ' ')
+	const tag = usePathname().replace('/tag/', '').replaceAll('-', ' ')
 
 	return (
 		<>
 			<TotalWritings tag={tag} />
 			<Spacer />
-			<Heading type="category">
-				<h1>Category</h1>
+			<Heading type="tag">
+				<h1>Tag</h1>
 				<span></span>
 				<h1>{tag}</h1>
 			</Heading>

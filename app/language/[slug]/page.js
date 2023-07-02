@@ -13,7 +13,7 @@ const Page = () => {
 		<>
 			<TotalWritings tag={tag} />
 			<Spacer />
-			<Heading type="category">
+			<Heading type="tag">
 				<h1>Language</h1>
 				<span></span>
 				<h1>{tag}</h1>

@@ -43,7 +43,7 @@
 		}
 	}
 
-	@include min(980px) {
+	@include min(981px) {
 		&:hover {
 			background-color: $primaryBlue;
 

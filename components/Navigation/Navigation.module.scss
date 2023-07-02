@@ -10,12 +10,22 @@
 		z-index: 100;
 		opacity: 0;
 		transition: 0.2s ease-in-out;
+		pointer-events: none;
+	}
+
+	@include min(981px) {
+		position: fixed;
+		max-width: 260px;
+		width: 100%;
+		top: calc(50%);
+		transform: translateY(-50%);
 	}
 
 	&.open {
 		@include max(980px) {
 			opacity: 1;
 			transform: translate(-50%, 40px);
+			pointer-events: all;
 		}
 	}
 
@@ -69,7 +79,7 @@
 		}
 	}
 
-	@include min(980px) {
+	@include min(981px) {
 		display: none;
 	}
 }
@@ -87,8 +97,12 @@
 	transform: translate(-50%, -50%);
 	opacity: 1;
 	transition: 0.2s ease-in-out;
+	@include min(981px) {
+		display: none;
+	}
 
 	&.closed {
 		opacity: 0;
+		pointer-events: none;
 	}
 }
