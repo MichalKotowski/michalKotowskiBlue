@@ -1,42 +1,62 @@
-'use client'
-
-import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
 import { getWritingAndMoreWritings } from '../../../lib/api'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import hljs from 'highlight.js/lib/core'
+import javascript from 'highlight.js/lib/languages/javascript'
+import { MARKS } from '@contentful/rich-text-types'
+import 'highlight.js/styles/tokyo-night-dark.css'
 import Tags from '@components/Tags'
 import Spacer from '@components/Spacer'
 import Flag from '@components/Flag'
 import Heading from '@components/Heading'
 
-const Page = () => {
-	const slug = usePathname().replace('/writings/', '')
-	const [data, setData] = useState()
+hljs.registerLanguage('javascript', javascript)
 
-	useEffect(() => {
-		const getWriting = async () => {
-			const { writing } = await getWritingAndMoreWritings(slug)
+export async function generateMetadata({ params }) {
+	const { writing } = await getWritingAndMoreWritings(params.slug)
 
-			setData(writing)
-		}
+	return {
+		title: `${writing.title} | Michał Kotowski`,
+	}
+}
 
-		getWriting()
-	}, [slug])
+const Page = async ({ params }) => {
+	const { writing } = await getWritingAndMoreWritings(params.slug)
 
-	if (!data) {
+	const options = {
+		renderMark: {
+			[MARKS.CODE]: (code) => {
+				const markup = {
+					__html: hljs.highlight(code, { language: 'javascript' }).value,
+				}
+
+				return (
+					<pre>
+						<code
+							dangerouslySetInnerHTML={markup}
+							class="hljs language-javascript"
+						></code>
+					</pre>
+				)
+			},
+		},
+	}
+
+	if (!writing) {
 		return <p>Loading...</p>
 	}
 
 	return (
 		<>
 			<Heading>
-				<h1>{data.title}</h1>
-				<Flag english={data.english} />
+				<h1>{writing.title}</h1>
+				<Flag english={writing.english} />
 			</Heading>
 			<Spacer />
-			{data.tags && <Tags elements={data.tags} />}
+			{writing.tags && <Tags elements={writing.tags} />}
 			<Spacer size="large" />
-			<article>{documentToReactComponents(data.content.json)}</article>
+			<article>
+				{documentToReactComponents(writing.content.json, options)}
+			</article>
 		</>
 	)
 }

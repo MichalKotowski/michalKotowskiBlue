@@ -1,25 +1,33 @@
-'use client'
-
-import { usePathname } from 'next/navigation'
 import TotalWritings from '@components/TotalWritings'
 import Writings from '@components/Writings'
 import Spacer from '@components/Spacer'
 import Heading from '@components/Heading'
+import { getWritingsByTag } from '../../../lib/api'
 
-const Page = () => {
-	const tag = usePathname().replace('/tag/', '').replaceAll('-', ' ')
+export async function generateMetadata({ params }) {
+	return {
+		title: `${params.slug.replaceAll('-', ' ')} | Michał Kotowski`,
+	}
+}
+
+const Page = async ({ params }) => {
+	const data = await getWritingsByTag(params.slug)
+
+	if (!data) {
+		return <p>Loading...</p>
+	}
 
 	return (
 		<>
-			<TotalWritings tag={tag} />
+			<TotalWritings amount={data.length} />
 			<Spacer />
 			<Heading type="tag">
 				<h1>Tag</h1>
 				<span></span>
-				<h1>{tag}</h1>
+				<h1>{params.slug.replaceAll('-', ' ')}</h1>
 			</Heading>
 			<Spacer size="large" />
-			<Writings showTags={true} amount={20} tag={tag} />
+			<Writings showTags={true} data={data} />
 		</>
 	)
 }

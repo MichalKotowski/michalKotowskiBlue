@@ -9,12 +9,6 @@
 	margin-right: 10px;
 	position: relative;
 
-	&.polish {
-		background-image: url('../../assets/icons/polish.svg');
-	}
-}
-
-h1 + .flag {
 	&::after {
 		content: '';
 		display: block;
@@ -24,5 +18,18 @@ h1 + .flag {
 		top: 50%;
 		transform: translate(-50%, -50%);
 		position: absolute;
+	}
+
+	&.polish {
+		background-image: url('../../assets/icons/polish.svg');
+	}
+}
+
+h1 + .flag {
+	margin-right: 0;
+	min-width: 17px;
+	&::after {
+		height: 30px;
+		width: 37px;
 	}
 }

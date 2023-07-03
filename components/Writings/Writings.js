@@ -1,33 +1,12 @@
-'use client'
-
 import Button from '@components/Button'
 import Pill from '@components/Pill'
 import Flag from '@components/Flag'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
-import { getWritings } from '../../lib/api'
 import { parseISO, format } from 'date-fns'
 import { romanize } from 'romans'
 import styles from './Writings.module.scss'
 
-const Writings = ({
-	displayHeading = false,
-	showTags = false,
-	amount,
-	tag,
-}) => {
-	const [data, setData] = useState([])
-
-	useEffect(() => {
-		const getData = async () => {
-			const data = await getWritings(amount, tag)
-
-			setData(data)
-		}
-
-		getData()
-	}, [amount])
-
+const Writings = ({ displayHeading = false, showTags = false, data }) => {
 	return (
 		<div className={styles.writings}>
 			{displayHeading && (

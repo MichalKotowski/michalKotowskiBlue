@@ -8,7 +8,7 @@ const Tags = ({ elements }) => {
 			<span></span>
 			<div className={styles.tagsList}>
 				{elements.map((tag) => (
-					<Pill key={tag} label={tag} />
+					<Pill key={tag} label={tag.replaceAll('-', ' ')} />
 				))}
 			</div>
 		</div>

@@ -1,8 +1,23 @@
-.content {
-	position: relative;
-	padding-bottom: 120px;
+.contentWrapper {
+	padding: 120px 0;
+	@include min(981px) {
+		display: flex;
+		align-items: center;
+	}
 
 	@include max(980px) {
-		padding-bottom: 60px;
+		padding: 60px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.content {
+		position: relative;
+
+		@include max(980px) {
+			max-width: 560px;
+			width: 100%;
+		}
 	}
 }

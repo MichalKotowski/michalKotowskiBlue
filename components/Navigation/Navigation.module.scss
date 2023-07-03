@@ -11,6 +11,7 @@
 		opacity: 0;
 		transition: 0.2s ease-in-out;
 		pointer-events: none;
+		max-width: 560px;
 	}
 
 	@include min(981px) {
@@ -53,7 +54,8 @@
 	position: fixed;
 	z-index: 100;
 	bottom: 20px;
-	right: 20px;
+	left: calc(50% + 260px);
+	transform: translateX(-50%);
 	border-radius: 8px;
 	background: rgba(20, 110, 255, 1);
 	backdrop-filter: blur(3px);
