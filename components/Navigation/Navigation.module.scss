@@ -61,6 +61,11 @@
 	backdrop-filter: blur(3px);
 	cursor: pointer;
 
+	@include max(600px) {
+		left: initial;
+		right: 0px;
+	}
+
 	span {
 		display: inline-block;
 		mask-size: 20px 21px;

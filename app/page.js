@@ -1,4 +1,4 @@
-import heroImage from '@assets/images/homepage.png'
+import heroImage from '@assets/images/homepage.jpg'
 import Writings from '@components/Writings'
 import Spacer from '@components/Spacer'
 import Image from 'next/image'

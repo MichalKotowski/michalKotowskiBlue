@@ -35,17 +35,11 @@ const Page = () => (
 			I would like to thank the creators of lofi hip hop, without whom I would
 			not be able to concentrate and accomplish all the things I have achieved.
 		</p>
-		<Spacer size="medium" />
+		<Spacer size="large" />
 		<Button
 			path="https://open.spotify.com/user/21zcittwmfkp4km4habttajqa?si=89127a6b6f844bed"
 			label="Spotify"
 			type="primary"
-			target="_blank"
-		/>
-		<Button
-			path="https://www.linkedin.com/in/michalkotowski/"
-			label="LinkedIn"
-			type="secondary"
 			target="_blank"
 		/>
 	</>

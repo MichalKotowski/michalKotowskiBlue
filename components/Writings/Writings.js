@@ -34,7 +34,7 @@ const Writings = ({ displayHeading = false, showTags = false, data }) => {
 							{showTags && writing.tags && (
 								<div className={styles.tags}>
 									{writing.tags.map((pill) => (
-										<Pill key={pill} label={pill} />
+										<Pill key={pill} label={pill.replaceAll('-', ' ')} />
 									))}
 								</div>
 							)}

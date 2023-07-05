@@ -15,6 +15,7 @@
 		padding: 0;
 		border: none;
 		border-radius: 0;
+		padding-top: 3px;
 	}
 
 	&.back {
@@ -23,6 +24,7 @@
 		border-radius: 0;
 		color: $text;
 		text-transform: initial;
+		outline: none;
 
 		.icon {
 			margin-left: 0;
@@ -37,7 +39,7 @@
 		border-radius: 4px;
 		display: inline-block;
 		background-color: $primaryBlue;
-		top: 1px;
+		top: 2px;
 		position: relative;
 		margin-left: 18px;
 
@@ -53,9 +55,5 @@
 			transform: translate(-50%, -50%);
 			position: absolute;
 		}
-	}
-
-	& + .button {
-		margin-left: 20px;
 	}
 }

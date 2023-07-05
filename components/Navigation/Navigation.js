@@ -9,6 +9,7 @@ const Navigation = () => {
 
 	return (
 		<div className={styles.navigationContainer}>
+			<div></div>
 			<nav
 				className={`${styles.navigationWrapper} ${
 					isOpen ? styles.open : styles.closed
