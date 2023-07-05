@@ -1,17 +1,27 @@
-import heroImage from '@assets/images/homepage.png'
+import heroImage from '@assets/images/about.jpg'
 import Image from 'next/image'
 import Spacer from '@components/Spacer'
+import Button from '@components/Button'
 
 export const metadata = {
 	title: 'About | Michał Kotowski',
 	description:
 		'My name is Michal Kotowski. I am an aspiring music producer, graphic designer, but most of all - a developer.',
+	robots: {
+		index: false,
+		follow: false,
+		googleBot: {
+			index: false,
+			follow: false,
+			noimageindex: false,
+		},
+	},
 }
 
 const Page = () => (
 	<>
 		<Image quality={100} src={heroImage} alt="Michal Kotowski" />
-		<Spacer size="medium" />
+		<Spacer size="large" />
 		<h1>Hello, World!</h1>
 		<Spacer size="medium" />
 		<p>
@@ -25,6 +35,19 @@ const Page = () => (
 			I would like to thank the creators of lofi hip hop, without whom I would
 			not be able to concentrate and accomplish all the things I have achieved.
 		</p>
+		<Spacer size="medium" />
+		<Button
+			path="https://open.spotify.com/user/21zcittwmfkp4km4habttajqa?si=89127a6b6f844bed"
+			label="Spotify"
+			type="primary"
+			target="_blank"
+		/>
+		<Button
+			path="https://www.linkedin.com/in/michalkotowski/"
+			label="LinkedIn"
+			type="secondary"
+			target="_blank"
+		/>
 	</>
 )
 

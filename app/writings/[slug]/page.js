@@ -8,7 +8,7 @@ import Tags from '@components/Tags'
 import Spacer from '@components/Spacer'
 import Flag from '@components/Flag'
 import Heading from '@components/Heading'
-import Image from 'next/image'
+import Button from '@components/Button'
 
 hljs.registerLanguage('javascript', javascript)
 
@@ -51,6 +51,8 @@ const Page = async ({ params }) => {
 
 	return (
 		<>
+			<Button path="/writings" label="Go back" type="back" />
+			<Spacer size="medium" />
 			<Heading>
 				<h1>{writing.title}</h1>
 				<Flag english={writing.english} />

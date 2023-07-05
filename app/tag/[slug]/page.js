@@ -7,6 +7,15 @@ import { getWritingsByTag } from '../../../lib/api'
 export async function generateMetadata({ params }) {
 	return {
 		title: `${params.slug.replaceAll('-', ' ')} | Michał Kotowski`,
+		robots: {
+			index: false,
+			follow: false,
+			googleBot: {
+				index: false,
+				follow: false,
+				noimageindex: false,
+			},
+		},
 	}
 }
 
