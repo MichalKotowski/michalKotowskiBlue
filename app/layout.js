@@ -19,18 +19,7 @@ const RootLayout = ({ children }) => {
 		<html lang="en">
 			<body onLoad={() => scrollToTop()}>
 				<Container>
-					{/* <motion.div
-						initial={{ opacity: 0, x: '-30px' }}
-						animate={{ opacity: 1, x: '0px' }}
-						transition={{
-							type: 'spring',
-							duration: 0.1,
-							stiffness: 75,
-							duration: 0.3,
-						}}
-					> */}
 					<Navigation />
-					{/* </motion.div> */}
 					<motion.div
 						initial={{ opacity: 0, x: '30px' }}
 						animate={{ opacity: 1, x: '0px' }}

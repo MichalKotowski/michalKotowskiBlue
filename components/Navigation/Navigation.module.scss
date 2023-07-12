@@ -38,12 +38,11 @@
 	}
 
 	.social {
-		align-self: flex-end;
+		justify-content: flex-end;
 		display: flex;
 		margin-top: 10px;
 		@include max(980px) {
 			margin-right: 50px;
-			justify-content: flex-end;
 		}
 	}
 }
