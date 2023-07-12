@@ -20,7 +20,12 @@ export const metadata = {
 
 const Page = () => (
 	<>
-		<Image quality={100} src={heroImage} alt="Michal Kotowski" />
+		<Image
+			quality={100}
+			src={heroImage}
+			alt="Michal Kotowski"
+			placeholder="blur"
+		/>
 		<Spacer size="large" />
 		<h1>Hello, World!</h1>
 		<Spacer size="medium" />

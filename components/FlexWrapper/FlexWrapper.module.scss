@@ -1,12 +1,14 @@
 .heading {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 
 	h1 + * {
 		margin-left: 20px;
 	}
 
 	&.tag {
+		justify-content: initial;
 		h1:first-child {
 			color: $text;
 		}

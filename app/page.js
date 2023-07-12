@@ -33,6 +33,7 @@ const Page = async () => {
 				quality={100}
 				src={heroImage}
 				alt="Picture of the author - Michal Kotowski"
+				placeholder="blur"
 			/>
 			<Spacer size="large" />
 			<h1>

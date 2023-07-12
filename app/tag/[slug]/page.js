@@ -1,7 +1,7 @@
 import TotalWritings from '@components/TotalWritings'
 import Writings from '@components/Writings'
 import Spacer from '@components/Spacer'
-import Heading from '@components/Heading'
+import FlexWrapper from '@components/FlexWrapper'
 import { getWritingsByTag } from '../../../lib/api'
 
 export async function generateMetadata({ params }) {
@@ -30,11 +30,11 @@ const Page = async ({ params }) => {
 		<>
 			<TotalWritings amount={data.length} />
 			<Spacer />
-			<Heading type="tag">
+			<FlexWrapper type="tag">
 				<h1>Tag</h1>
 				<span></span>
 				<h1>{params.slug.replaceAll('-', ' ')}</h1>
-			</Heading>
+			</FlexWrapper>
 			<Spacer size="large" />
 			<Writings showTags={true} data={data} />
 		</>

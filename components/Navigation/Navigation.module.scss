@@ -1,8 +1,8 @@
 .navigationWrapper {
 	display: flex;
 	flex-direction: column;
+	position: fixed;
 	@include max(980px) {
-		position: fixed;
 		bottom: 60px;
 		width: calc(100% - 40px);
 		left: 50%;
@@ -15,7 +15,6 @@
 	}
 
 	@include min(981px) {
-		position: fixed;
 		max-width: 260px;
 		width: 100%;
 		top: calc(50%);
@@ -44,6 +43,7 @@
 		margin-top: 10px;
 		@include max(980px) {
 			margin-right: 50px;
+			justify-content: flex-end;
 		}
 	}
 }
@@ -56,9 +56,10 @@
 	bottom: 20px;
 	left: calc(50% + 260px);
 	transform: translateX(-50%);
-	border-radius: 8px;
-	background: rgba(20, 110, 255, 1);
-	backdrop-filter: blur(3px);
+	border-radius: 4px;
+	background-color: $primaryBlue;
+	// background: rgba(20, 110, 255, 1);
+	// backdrop-filter: blur(3px);
 	cursor: pointer;
 
 	@include max(600px) {

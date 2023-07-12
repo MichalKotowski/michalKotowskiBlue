@@ -7,7 +7,7 @@ import 'highlight.js/styles/tokyo-night-dark.css'
 import Tags from '@components/Tags'
 import Spacer from '@components/Spacer'
 import Flag from '@components/Flag'
-import Heading from '@components/Heading'
+import FlexWrapper from '@components/FlexWrapper'
 import Button from '@components/Button'
 
 hljs.registerLanguage('javascript', javascript)
@@ -51,12 +51,12 @@ const Page = async ({ params }) => {
 
 	return (
 		<>
-			<Button path="/writings" label="Go back" type="back" />
-			<Spacer size="medium" />
-			<Heading>
-				<h1>{writing.title}</h1>
+			<FlexWrapper>
+				<Button path="/writings" label="Go back" type="back" />
 				<Flag english={writing.english} />
-			</Heading>
+			</FlexWrapper>
+			<Spacer size="medium" />
+			<h1>{writing.title}</h1>
 			<Spacer />
 			{writing.tags && <Tags elements={writing.tags} />}
 			<Spacer size="large" />

@@ -1,4 +1,4 @@
-import styles from './Heading.module.scss'
+import styles from './FlexWrapper.module.scss'
 
 const Heading = ({ children, type }) => {
 	return (
