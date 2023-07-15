@@ -7,17 +7,20 @@ import Container from '@components/Container'
 import Content from '@components/Content'
 import { motion } from 'framer-motion'
 import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+import { GoogleAnalytics } from 'nextjs-google-analytics'
 
 const RootLayout = ({ children }) => {
-	useEffect(() => window.document.body.scrollTo(0, 0), [])
+	const { pathname } = useRouter()
 
-	function scrollToTop() {
-		window.document.body.scrollIntoView()
-	}
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [pathname])
 
 	return (
 		<html lang="en">
-			<body onLoad={() => scrollToTop()}>
+			<GoogleAnalytics trackPageViews />
+			<body>
 				<Container>
 					<Navigation />
 					<motion.div

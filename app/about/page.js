@@ -7,15 +7,6 @@ export const metadata = {
 	title: 'About | Michał Kotowski',
 	description:
 		'My name is Michal Kotowski. I am an aspiring music producer, graphic designer, but most of all - a developer.',
-	robots: {
-		index: false,
-		follow: false,
-		googleBot: {
-			index: false,
-			follow: false,
-			noimageindex: false,
-		},
-	},
 }
 
 const Page = () => (

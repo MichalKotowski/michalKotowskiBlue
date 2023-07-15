@@ -19,6 +19,7 @@
 			border-radius: 4px;
 			background-color: $darkGrey;
 			margin-right: 10px;
+			transition: 0.2s ease-in-out;
 		}
 
 		.content {
@@ -46,6 +47,12 @@
 				& > *:not(:last-child) {
 					margin-right: 10px;
 				}
+			}
+		}
+
+		&:hover {
+			.rectangle {
+				background-color: $lightGrey;
 			}
 		}
 	}

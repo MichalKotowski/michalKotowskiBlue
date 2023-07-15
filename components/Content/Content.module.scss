@@ -1,5 +1,6 @@
 .contentWrapper {
 	padding: 120px 0;
+	height: 100%;
 
 	@include min(981px) {
 		display: flex;

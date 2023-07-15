@@ -9,15 +9,6 @@ export const metadata = {
 	title: 'Home | Michał Kotowski',
 	description:
 		"I'm Michał Kotowski, a web developer from Warsaw with experience in design and brand identity.",
-	robots: {
-		index: false,
-		follow: false,
-		googleBot: {
-			index: false,
-			follow: false,
-			noimageindex: false,
-		},
-	},
 }
 
 const Page = async () => {

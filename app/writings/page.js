@@ -7,15 +7,6 @@ export const metadata = {
 	title: 'Writings | Michał Kotowski',
 	description:
 		'My name is Michal Kotowski. Whenever I have enough time on my hands, I like to share my thoughts on just about everything.',
-	robots: {
-		index: false,
-		follow: false,
-		googleBot: {
-			index: false,
-			follow: false,
-			noimageindex: false,
-		},
-	},
 }
 
 const Page = async () => {

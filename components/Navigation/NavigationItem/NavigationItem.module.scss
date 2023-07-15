@@ -13,7 +13,7 @@
 		height: 40px;
 		margin-right: 12px;
 		border-radius: 4px;
-		transition: 0.2s ease-in-out;
+		transition: margin 0.2s ease-out;
 
 		&::after {
 			content: '';
@@ -27,6 +27,7 @@
 			transform: translate(-50%, -50%);
 			position: absolute;
 			opacity: 0.6;
+			transition: 0.2s ease-in-out;
 		}
 
 		&.home::after {
@@ -50,6 +51,18 @@
 		color: $white;
 		opacity: 0.7;
 		transition: 0.2s ease-in-out;
+	}
+
+	&:hover {
+		span {
+			&::after {
+				opacity: 1;
+			}
+		}
+
+		p {
+			opacity: 1;
+		}
 	}
 
 	&.active {
