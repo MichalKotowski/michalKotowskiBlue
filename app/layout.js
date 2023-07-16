@@ -7,11 +7,11 @@ import Container from '@components/Container'
 import Content from '@components/Content'
 import { motion } from 'framer-motion'
 import { useEffect } from 'react'
-import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { GoogleAnalytics } from 'nextjs-google-analytics'
 
 const RootLayout = ({ children }) => {
-	const { pathname } = useRouter()
+	const pathname = usePathname()
 
 	useEffect(() => {
 		window.scrollTo(0, 0)

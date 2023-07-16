@@ -50,9 +50,11 @@
 			}
 		}
 
-		&:hover {
-			.rectangle {
-				background-color: $lightGrey;
+		@include min(981px) {
+			&:hover {
+				.rectangle {
+					background-color: $lightGrey;
+				}
 			}
 		}
 	}
