@@ -14,8 +14,13 @@ const slugify = (text) => {
 		.replace(/\-$/g, '') // Remove trailing -
 }
 
-const Pill = ({ label }) => (
-	<Link className={styles.pill} href={`/tag/${slugify(label)}`}>
+const Pill = ({ label, isBookmark }) => (
+	<Link
+		className={styles.pill}
+		href={
+			isBookmark ? `/bookmarks/tag/${slugify(label)}` : `/tag/${slugify(label)}`
+		}
+	>
 		{label}
 	</Link>
 )

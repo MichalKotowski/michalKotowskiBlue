@@ -18,7 +18,7 @@ const Page = async () => {
 
 	return (
 		<>
-			<TotalWritings amount={data.length} />
+			<TotalWritings type="writing" amount={data.length} />
 			<Spacer />
 			<h1>
 				Whenever I have enough time on my hands, I like to share my thoughts on

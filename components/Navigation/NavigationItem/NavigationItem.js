@@ -8,12 +8,15 @@ const NavigationItem = ({ path, icon, label, onClick }) => {
 	const isWritingType = () =>
 		label === 'Writings' &&
 		writingTypes.some((writingType) => currentPath.startsWith(writingType))
+	const isBookmarkType = () => path.length > 1 && currentPath.startsWith(path)
 
 	return (
 		<Link
 			href={path}
 			className={`${styles.navigationItem} ${
-				currentPath === path || isWritingType() ? styles.active : ''
+				currentPath === path || isWritingType() || isBookmarkType()
+					? styles.active
+					: ''
 			}`}
 			onClick={onClick}
 		>

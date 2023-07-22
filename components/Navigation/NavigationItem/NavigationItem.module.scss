@@ -43,6 +43,10 @@
 		&.about::after {
 			mask-image: url('../../../assets/icons/message.svg');
 		}
+
+		&.bookmarks::after {
+			mask-image: url('../../../assets/icons/bookmark.svg');
+		}
 	}
 
 	p {

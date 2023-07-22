@@ -40,6 +40,12 @@ const Navigation = () => {
 							onClick={() => setIsOpen(false)}
 						/>
 						<NavigationItem
+							path="/bookmarks"
+							icon="bookmarks"
+							label="Bookmarks"
+							onClick={() => setIsOpen(false)}
+						/>
+						<NavigationItem
 							path="/about"
 							icon="about"
 							label="About"

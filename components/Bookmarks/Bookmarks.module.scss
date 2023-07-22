@@ -38,6 +38,13 @@
 				@include secondaryHeading;
 				text-decoration: none;
 				color: $primaryBlue;
+				display: block;
+
+				span {
+					@include secondaryParagraph;
+					display: block;
+					transition: 0.2s ease-in-out;
+				}
 			}
 
 			.tags {
@@ -51,6 +58,14 @@
 			&:hover {
 				.rectangle {
 					background-color: $lightGrey;
+				}
+			}
+
+			.content {
+				.title:hover {
+					span {
+						color: $white;
+					}
 				}
 			}
 		}
