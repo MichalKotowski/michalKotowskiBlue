@@ -1,6 +1,6 @@
 import styles from './FlexWrapper.module.scss'
 
-const Heading = ({ children, type }) => {
+const FlexWrapper = ({ children, type }) => {
 	return (
 		<div className={`${styles.heading} ${type ? styles[type] : ''}`}>
 			{children}
@@ -8,4 +8,4 @@ const Heading = ({ children, type }) => {
 	)
 }
 
-export default Heading
+export default FlexWrapper

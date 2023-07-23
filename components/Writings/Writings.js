@@ -2,8 +2,7 @@ import Button from '@components/Button'
 import Pill from '@components/Pill'
 import Flag from '@components/Flag'
 import Link from 'next/link'
-import { parseISO, format } from 'date-fns'
-import { romanize } from 'romans'
+import { toRomanDate } from '../../lib/utilities'
 import styles from './Writings.module.scss'
 
 const Writings = ({ displayHeading = false, showTags = false, data }) => {
@@ -22,11 +21,7 @@ const Writings = ({ displayHeading = false, showTags = false, data }) => {
 						<div className={styles.content}>
 							<div className={styles.languageAndDate}>
 								<Flag english={writing.english} />
-								<p>
-									{format(parseISO(writing.date), `dd `)}
-									{romanize(parseISO(writing.date).getMonth() + 1)}
-									{format(parseISO(writing.date), ` y`)}
-								</p>
+								<p>{toRomanDate(writing.date)}</p>
 							</div>
 							<Link className={styles.title} href={`/writings/${writing.slug}`}>
 								{writing.title}

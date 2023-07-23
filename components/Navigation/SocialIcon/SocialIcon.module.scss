@@ -21,7 +21,7 @@
 		opacity: 0.6;
 
 		&.github {
-			mask-image: url('../../../assets/icons/home.svg');
+			mask-image: url('../../../assets/icons/github.svg');
 			mask-size: 20px 19px;
 			height: 19px;
 		}
@@ -40,6 +40,10 @@
 			mask-size: 20px 16px;
 			height: 16px;
 			mask-image: url('../../../assets/icons/email.svg');
+		}
+
+		&.instagram {
+			mask-image: url('../../../assets/icons/instagram.svg');
 		}
 	}
 

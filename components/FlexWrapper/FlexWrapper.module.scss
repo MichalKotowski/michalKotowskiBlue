@@ -25,4 +25,28 @@
 			top: 1px;
 		}
 	}
+
+	&.bookmark {
+		justify-content: flex-start;
+
+		p {
+			@include pill;
+			color: $text;
+			margin-right: 10px;
+		}
+
+		span {
+			width: 1px;
+			height: 14px;
+			background-color: $primaryBlue;
+			margin-right: 20px;
+			font-weight: 600;
+		}
+
+		span + p {
+			@include pill;
+			color: $white;
+			font-weight: 600;
+		}
+	}
 }

@@ -65,6 +65,10 @@ const Navigation = () => {
 							href="https://www.chess.com/member/ipisay"
 							icon="chess"
 						/>
+						<SocialButton
+							href="https://www.instagram.com/kocie420"
+							icon="instagram"
+						/>
 						<SocialButton href="mailto:hello@michalkotowski.pl" icon="email" />
 					</div>
 				</motion.div>

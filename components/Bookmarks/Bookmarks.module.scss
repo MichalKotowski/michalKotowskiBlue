@@ -44,6 +44,7 @@
 					@include secondaryParagraph;
 					display: block;
 					transition: 0.2s ease-in-out;
+					color: $white;
 				}
 			}
 
@@ -58,14 +59,6 @@
 			&:hover {
 				.rectangle {
 					background-color: $lightGrey;
-				}
-			}
-
-			.content {
-				.title:hover {
-					span {
-						color: $white;
-					}
 				}
 			}
 		}
