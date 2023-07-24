@@ -81,7 +81,9 @@ article {
 		@include paragraph;
 	}
 
-	div + div {
+	div + div,
+	div + ul,
+	ul + div {
 		margin-top: 20px;
 	}
 
