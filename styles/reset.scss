@@ -122,3 +122,10 @@ h2 {
 p {
 	@include paragraph;
 }
+
+ul,
+ol {
+	li {
+		@include paragraph;
+	}
+}
