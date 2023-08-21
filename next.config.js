@@ -75,6 +75,11 @@ module.exports = {
 				destination: '/writings/optymalizacja-zycia-jako-remedium-na-smuteczek',
 				permanent: true,
 			},
+			{
+				source: '/home',
+				destination: '/',
+				permanent: true,
+			},
 		]
 	},
 }
