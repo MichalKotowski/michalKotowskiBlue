@@ -62,7 +62,6 @@ const Page = async ({ params }) => {
 			</FlexWrapper>
 			<Spacer size="medium" />
 			<h1>{writing.title}</h1>
-			<Spacer />
 			{writing.tags && <Tags elements={writing.tags} />}
 			<Spacer size="large" />
 			<article>
