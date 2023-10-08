@@ -2,9 +2,11 @@ const path = require('path')
 
 /** @type {import('next').NextConfig} */
 module.exports = {
-	// images: {
-	// 	loader: 'custom',
-	// },
+	images: {
+		// loader: 'imgix',
+		// path: 'https://michalkotowski.pl/', // write you production link or localhost:3000 based on your env(for production, development, staging)
+		domains: ['images.ctfassets.net'], // write domain which have assets
+	},
 	experimental: {
 		appDir: true,
 	},

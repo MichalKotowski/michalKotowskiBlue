@@ -9,6 +9,7 @@ import Spacer from '@components/Spacer'
 import Flag from '@components/Flag'
 import FlexWrapper from '@components/FlexWrapper'
 import Button from '@components/Button'
+import ContentfulImage from '../../../components/ContentfulImage'
 
 hljs.registerLanguage('javascript', javascript)
 
@@ -41,7 +42,11 @@ const Page = async ({ params }) => {
 		},
 		renderNode: {
 			[BLOCKS.PARAGRAPH]: (node, children) => <div>{children}</div>,
-			// [BLOCKS.EMBEDDED_ASSET]: (node, children) => console.log('yuh')
+			[BLOCKS.EMBEDDED_ASSET]: (node, children) =>
+				ContentfulImage(
+					node.data.target.sys.id,
+					writing.content.links.assets.block
+				),
 		},
 	}
 
