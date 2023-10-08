@@ -1,9 +1,9 @@
 .tags {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 
 	& > *:not(:last-child) {
-		margin-top: 10px;
+		margin-top: 16px;
 	}
 
 	p {
@@ -20,8 +20,6 @@
 	}
 
 	.tagsList {
-		display: flex;
-
 		& > * {
 			&:not(:last-child) {
 				margin-right: 10px;
