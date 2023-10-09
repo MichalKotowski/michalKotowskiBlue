@@ -11,22 +11,12 @@ const Watch = () => {
 	const [time, setTime] = useState(false)
 
 	useEffect(() => {
-		const timer = setInterval(() => {
+		setInterval(() => {
 			const date = new Date()
 			const convertedTime = date.toLocaleTimeString()
 			setTime(convertedTime)
 		}, 1000)
-
-		return () => clearInterval(timer)
 	})
-
-	// if (!time) {
-	// 	return (
-	// 		<div className={styles.watch}>
-	// 			<span>女児</span>
-	// 		</div>
-	// 	)
-	// }
 
 	return (
 		<motion.div
