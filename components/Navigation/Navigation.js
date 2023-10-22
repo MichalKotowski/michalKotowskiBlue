@@ -17,7 +17,6 @@ const Navigation = () => {
 				}`}
 			>
 				<Watch />
-				<CurrentlyPlaying />
 				<motion.div
 					initial={{ opacity: 0, x: '-30px' }}
 					animate={{ opacity: 1, x: '0px' }}
@@ -28,6 +27,7 @@ const Navigation = () => {
 						duration: 0.3,
 					}}
 				>
+					<CurrentlyPlaying />
 					<div className={styles.navigation}>
 						<NavigationItem
 							path="/"

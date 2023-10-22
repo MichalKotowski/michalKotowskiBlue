@@ -22,7 +22,7 @@ export async function GET() {
 			return Response.json({ isPlaying: false })
 		}
 
-		const isPlaying = song.is_playing
+		const isPlaying = true
 		const title = song.item.name
 		const artist = song.item.artists.map((_artist) => _artist.name).join(', ')
 		const album = song.item.album.name
