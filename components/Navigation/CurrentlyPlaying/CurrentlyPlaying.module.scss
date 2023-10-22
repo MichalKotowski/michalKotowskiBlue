@@ -1,0 +1,99 @@
+.hiddenText {
+	@include pill;
+	white-space: nowrap;
+	height: 0;
+	opacity: 0;
+	z-index: -1;
+	position: absolute;
+	pointer-events: none;
+
+	@include max(980px) {
+		display: none;
+	}
+}
+
+.currentlyPlaying {
+	display: flex;
+	margin-bottom: 10px;
+
+	&.align {
+		align-items: center;
+	}
+
+	@include max(980px) {
+		display: none;
+	}
+
+	.spotify {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		background-image: url('../../../assets/icons/spotify.svg');
+		background-size: 20px 20px;
+	}
+
+	.icon {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		width: 14px;
+		min-width: 14px;
+		height: 14px;
+
+		span {
+			width: 4px;
+			height: 100%;
+			background-color: $primaryBlue;
+			border-radius: 4px;
+			transform-origin: bottom;
+			animation: bounce 2.2s ease infinite alternate;
+
+			&:nth-of-type(2) {
+				animation-delay: -2.2s;
+			}
+
+			&:nth-of-type(3) {
+				animation-delay: -3.7s;
+			}
+		}
+	}
+
+	.text {
+		margin-left: 8px;
+		width: 238px;
+
+		p,
+		a {
+			@include pill;
+			white-space: nowrap;
+			line-height: 16px;
+			color: $text;
+
+			strong {
+				color: $white;
+			}
+		}
+	}
+}
+
+@keyframes bounce {
+	10% {
+		transform: scaleY(0.3);
+	}
+
+	30% {
+		transform: scaleY(1);
+	}
+
+	60% {
+		transform: scaleY(0.5);
+	}
+
+	80% {
+		transform: scaleY(0.75);
+	}
+
+	100% {
+		transform: scaleY(0.6);
+	}
+}

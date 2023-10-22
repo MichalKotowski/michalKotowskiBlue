@@ -1,6 +1,7 @@
 import Watch from '@components/Navigation/Watch'
 import NavigationItem from '@components/Navigation/NavigationItem'
 import SocialButton from './SocialIcon/SocialButton'
+import CurrentlyPlaying from './CurrentlyPlaying/CurrentlyPlaying'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import styles from './Navigation.module.scss'
@@ -16,6 +17,7 @@ const Navigation = () => {
 				}`}
 			>
 				<Watch />
+				<CurrentlyPlaying />
 				<motion.div
 					initial={{ opacity: 0, x: '-30px' }}
 					animate={{ opacity: 1, x: '0px' }}
