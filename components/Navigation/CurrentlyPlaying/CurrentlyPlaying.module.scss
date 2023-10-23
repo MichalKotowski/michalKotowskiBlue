@@ -6,10 +6,6 @@
 	z-index: -1;
 	position: absolute;
 	pointer-events: none;
-
-	@include max(980px) {
-		display: none;
-	}
 }
 
 .currentlyPlaying {
@@ -18,10 +14,6 @@
 
 	&.align {
 		align-items: center;
-	}
-
-	@include max(980px) {
-		display: none;
 	}
 
 	.spotify {
@@ -62,6 +54,14 @@
 		margin-left: 8px;
 		width: 238px;
 
+		@include max(980px) {
+			width: 538px;
+		}
+
+		@include max(600px) {
+			width: calc(100vw - 62px);
+		}
+
 		p,
 		a {
 			@include pill;
@@ -71,6 +71,10 @@
 
 			strong {
 				color: $white;
+			}
+
+			span {
+				color: $primaryBlue;
 			}
 		}
 	}

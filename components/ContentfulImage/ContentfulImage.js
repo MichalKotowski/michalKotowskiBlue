@@ -17,7 +17,7 @@ const ContentfulImage = (id, assets) => {
 					width={560}
 					height={0}
 					quality={100}
-					alt={asset.title}
+					alt={asset.description}
 					style={{ height: 'auto' }}
 				/>
 				{hasDescription ? (

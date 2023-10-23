@@ -25,14 +25,10 @@ export async function GET() {
 		const isPlaying = true
 		const title = song.item.name
 		const artist = song.item.artists.map((_artist) => _artist.name).join(', ')
-		const album = song.item.album.name
-		const albumImageUrl = song.item.album.images[0].url
 		const songUrl = song.item.external_urls.spotify
 
 		return new Response(
 			JSON.stringify({
-				album,
-				albumImageUrl,
 				artist,
 				isPlaying,
 				songUrl,
@@ -41,9 +37,7 @@ export async function GET() {
 			{
 				status: 200,
 				headers: {
-					'content-type': 'application/json',
-					'cache-control':
-						'public, s-maxage=86400, stale-while-revalidate=43200',
+					'cache-control': 'public, s-maxage=60, stale-while-revalidate=30',
 				},
 			}
 		)
