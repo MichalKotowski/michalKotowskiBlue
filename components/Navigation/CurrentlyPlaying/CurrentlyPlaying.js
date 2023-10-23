@@ -40,11 +40,7 @@ const CurrentlyPlaying = () => {
 		}
 	}, [ref, data, windowWidth])
 
-	if (!data) {
-		return null
-	}
-
-	if (!data.isPlaying) {
+	if (!data || !data.isPlaying) {
 		return (
 			<div className={`${styles.currentlyPlaying} ${styles.align}`}>
 				<div className={styles.spotify}></div>
