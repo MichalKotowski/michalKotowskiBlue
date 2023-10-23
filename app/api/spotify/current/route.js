@@ -22,7 +22,7 @@ export async function GET() {
 			return Response.json({ isPlaying: false })
 		}
 
-		const isPlaying = true
+		const isPlaying = song.is_playing
 		const title = song.item.name
 		const artist = song.item.artists.map((_artist) => _artist.name).join(', ')
 		const songUrl = song.item.external_urls.spotify
@@ -37,7 +37,8 @@ export async function GET() {
 			{
 				status: 200,
 				headers: {
-					'cache-control': 'public, s-maxage=60, stale-while-revalidate=30',
+					'content-type': 'application/json',
+					'cache-control': 'public, s-maxage=30, stale-while-revalidate=10',
 				},
 			}
 		)

@@ -9,7 +9,7 @@ async function fetcher(url) {
 
 const CurrentlyPlaying = () => {
 	const [isOverflow, setIsOverflow] = useState(undefined)
-	const [windowWidth, setWindowWidth] = useState(0)
+	const [windowWidth, setWindowWidth] = useState(undefined)
 
 	const { data } = useSWR('/api/spotify/current', fetcher)
 	const ref = useRef(null)

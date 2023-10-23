@@ -66,6 +66,7 @@
 		a {
 			@include pill;
 			white-space: nowrap;
+			font-size: 12px !important;
 			line-height: 16px;
 			color: $text;
 
