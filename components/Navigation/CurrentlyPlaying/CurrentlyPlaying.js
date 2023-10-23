@@ -70,7 +70,7 @@ const CurrentlyPlaying = () => {
 					{isOverflow ? (
 						<Marquee
 							pauseOnHover={true}
-							gradient={true}
+							gradient={windowWidth < 981 ? false : true}
 							gradientColor={'rgb(5, 5, 7)'}
 							gradientWidth={20}
 							speed={30}

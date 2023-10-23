@@ -21,17 +21,6 @@ module.exports = {
 		SPOTIFY_CLIENT_SECRET: process.env.SPOTIFY_CLIENT_SECRET,
 		SPOTIFY_REFRESH_TOKEN: process.env.SPOTIFY_REFRESH_TOKEN,
 	},
-	headers: () => [
-		{
-			source: '/api/spotify/current',
-			headers: [
-				{
-					key: 'cache-control',
-					value: 'public, max-age=10, s-maxage=30, stale-while-revalidate=60',
-				},
-			],
-		},
-	],
 	async redirects() {
 		return [
 			{

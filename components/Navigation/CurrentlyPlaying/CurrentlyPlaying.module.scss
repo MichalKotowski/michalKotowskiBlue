@@ -12,6 +12,10 @@
 	display: flex;
 	margin-bottom: 10px;
 
+	@include max(980px) {
+		align-items: center;
+	}
+
 	&.align {
 		align-items: center;
 	}
@@ -67,7 +71,7 @@
 			@include pill;
 			white-space: nowrap;
 			font-size: 12px !important;
-			line-height: 16px;
+			line-height: 16px !important;
 			color: $text;
 
 			strong {
