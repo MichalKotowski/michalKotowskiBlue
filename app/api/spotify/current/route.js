@@ -1,5 +1,8 @@
 import { getAccessToken } from '../../../../lib/utilities'
 
+export const revalidate = 30
+export const dynamic = 'force-dynamic'
+
 export async function GET() {
 	try {
 		const { access_token } = await getAccessToken()
@@ -38,8 +41,9 @@ export async function GET() {
 				status: 200,
 				headers: {
 					'content-type': 'application/json',
-					'cache-control':
-						'public, max-age=10, s-maxage=30, stale-while-revalidate=60',
+					'Cache-Control': 'public, s-maxage=30',
+					'CDN-Cache-Control': 'public, s-maxage=30',
+					'Vercel-CDN-Cache-Control': 'public, s-maxage=30',
 				},
 			}
 		)
