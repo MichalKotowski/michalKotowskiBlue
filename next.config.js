@@ -26,8 +26,8 @@ module.exports = {
 			source: '/api/spotify/current',
 			headers: [
 				{
-					key: 'Cache-Control',
-					value: 'no-store',
+					key: 'cache-control',
+					value: 'public, max-age=10, s-maxage=30, stale-while-revalidate=60',
 				},
 			],
 		},
