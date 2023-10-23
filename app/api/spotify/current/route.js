@@ -38,7 +38,7 @@ export async function GET() {
 				status: 200,
 				headers: {
 					'content-type': 'application/json',
-					'cache-control': 'public, s-maxage=30, stale-while-revalidate=10',
+					'cache-control': 'no-cache',
 				},
 			}
 		)
