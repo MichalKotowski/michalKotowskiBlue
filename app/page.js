@@ -28,7 +28,7 @@ const Page = async () => {
 			/>
 			<Spacer size="large" />
 			<h1>
-				Welcome! I&apos;m <Link href="/about">Michał Kotowski</Link>, a web
+				Hey! I&apos;m <Link href="/about">Michał Kotowski</Link>, a software
 				developer from Warsaw with experience in design and brand identity.
 			</h1>
 			<Spacer size="medium" />
