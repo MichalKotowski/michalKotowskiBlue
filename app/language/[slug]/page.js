@@ -19,7 +19,7 @@ const Page = async ({ params }) => {
 
 	return (
 		<>
-			<TotalWritings amount={data.length} />
+			<TotalWritings type="writing" amount={data.length} />
 			<Spacer />
 			<FlexWrapper type="tag">
 				<h1>Language</h1>
