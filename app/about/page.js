@@ -21,39 +21,24 @@ const Page = () => (
 		<h1>Hello, World!</h1>
 		<Spacer size="medium" />
 		<p>
-			As you may have guessed, my name is <strong>Michał Kotowski</strong>.
-			I&apos;m very lucky, because my work is also my passion. I really enjoy
-			fiddling around with code, but I also adore making web pretty. I would
-			like to spend more time producing songs - the idea of sharing your
-			emotions and personality through music is something I crave every day.
-			Recently, I&apos;ve taken up a new hobby,{' '}
-			<a href="https://www.instagram.com/kocie420/" target="_blank">
-				photography
-			</a>
-			. At least twice a week, you can see me on the pitch playing football. I
-			love climbing, whether it be outdoors or indoors. Snorkelling is also my
-			thing, and I&apos;m trying to work up the courage, to finally do the scuba
-			diving course.
+			I&apos;m <strong>Michał Kotowski</strong>, a software engineer from Warsaw
+			who loves crafting digital experiences. Whether I&apos;m writing code,
+			designing UIs, or refining design systems, I find joy in building things
+			that are both functional and beautiful. My work blends logic with
+			creativity, and I wouldn&apos;t have it any other way.
 		</p>
 		<Spacer size="medium" />
 		<p>
-			I was <strong>born and raised in the capital of Poland, Warsaw</strong>.
-			My past is quite wild, and I still can&apos;t believe that I managed to
-			get rid of depression and make a career out of nothing.
+			Beyond the screen, music is my second language—I produce tracks in DAWs,
+			play the piano, and find endless inspiration in sound. Books keep me
+			curious, and lofi hip hop was my companion during late-night coding
+			sessions when I first started this journey. When I need a break,
+			you&apos;ll probably find me biking through the city or playing football.
 		</p>
 		<Spacer size="medium" />
 		<p>
-			I currently{' '}
-			<strong>work in the Data Cloud sector as a software engineer</strong>.
-			It&apos;s a great privilege because it&apos;s hard to make a living in our
-			country. I really appreciate everything I have, and I&apos;m full of love
-			for everything around me. My family, friends, random people who are kind
-			to me - you name it.
-		</p>
-		<Spacer size="medium" />
-		<p>
-			Thank you, dear reader. I really appreciate you taking the time to read
-			all of this. Have a nice day!
+			I&apos;m deeply grateful for where I am today and excited about
+			what&apos;s ahead. Thanks for stopping by!
 		</p>
 		<Spacer size="large" />
 		<Button
