@@ -22,23 +22,21 @@ const Page = () => (
 		<Spacer size="medium" />
 		<p>
 			I&apos;m <strong>Michał Kotowski</strong>, a software engineer from Warsaw
-			who loves crafting digital experiences. Whether I&apos;m writing code,
-			designing UIs, or refining design systems, I find joy in building things
-			that are both functional and beautiful. My work blends logic with
-			creativity, and I wouldn&apos;t have it any other way.
+			with a passion for crafting digital experiences. Whether I&apos;m writing
+			code, brainstorming ideas, or refining design systems, I take joy in
+			building things that are both functional and beautiful. My work blends
+			logic with creativity, and I wouldn&apos;t have it any other way.
 		</p>
 		<Spacer size="medium" />
 		<p>
-			Beyond the screen, music is my second language—I produce tracks in DAWs,
-			play the piano, and find endless inspiration in sound. Books keep me
-			curious, and lofi hip hop was my companion during late-night coding
-			sessions when I first started this journey. When I need a break,
-			you&apos;ll probably find me biking through the city or playing football.
+			Beyond the screen, I&apos;m deeply curious about the human mind —
+			particularly how mindfulness influences us and what drives our behavior,
+			especially in the context of status games
 		</p>
 		<Spacer size="medium" />
 		<p>
-			I&apos;m deeply grateful for where I am today and excited about
-			what&apos;s ahead. Thanks for stopping by!
+			I’m incredibly grateful for where I am today and excited about what’s
+			ahead. Thanks for stopping by!
 		</p>
 		<Spacer size="large" />
 		<Button
