@@ -9,7 +9,7 @@ export const metadata = {
 		'My name is Michal Kotowski. Whenever I have enough time on my hands, I like to share my thoughts on just about everything.',
 }
 
-const Page = async () => {
+const Page = async (props) => {
 	const data = await getWritings(100)
 
 	if (!data) {

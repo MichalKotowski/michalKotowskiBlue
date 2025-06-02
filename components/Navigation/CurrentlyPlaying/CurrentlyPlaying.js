@@ -45,7 +45,7 @@ const CurrentlyPlaying = () => {
 			<div className={`${styles.currentlyPlaying} ${styles.align}`}>
 				<div className={styles.spotify}></div>
 				<div className={styles.text}>
-					<p>Nothing is being played</p>
+					<p>Spotify playback is idle</p>
 				</div>
 			</div>
 		)

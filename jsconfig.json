@@ -1,17 +1,18 @@
 {
 	"compilerOptions": {
-		"module": "es2020",
+		"module": "ES6",
 		"moduleResolution": "Node",
-		"target": "ES2020",
-		"jsx": "react-jsx",
+		"jsx": "preserve",
 		"strictNullChecks": true,
 		"strictFunctionTypes": true,
-		"checkJs": false,
+		"checkJs": true,
 		"paths": {
 			"@components/*": ["./components/*"],
 			"@styles/*": ["./styles/*"],
 			"@assets/*": ["./assets/*"],
-			"@app/*": ["./app/*"]
+			"@app/*": ["./app/*"],
+			"@hooks/*": ["./hooks/*"],
+			"@context/*": ["./context/*"]
 		}
 	},
 	"require": ["tsconfig-paths/register"],

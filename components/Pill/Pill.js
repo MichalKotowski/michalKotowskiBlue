@@ -1,5 +1,8 @@
+'use client'
+
 import styles from './Pill.module.scss'
 import Link from 'next/link'
+import { useAnimationOnNavigate } from '@hooks/useAnimationOnNavigate'
 
 const slugify = (text) => {
 	return text
@@ -14,15 +17,21 @@ const slugify = (text) => {
 		.replace(/\-$/g, '') // Remove trailing -
 }
 
-const Pill = ({ label, isBookmark }) => (
-	<Link
-		className={styles.pill}
-		href={
-			isBookmark ? `/bookmarks/tag/${slugify(label)}` : `/tag/${slugify(label)}`
-		}
-	>
-		{label}
-	</Link>
-)
+const Pill = ({ label, isBookmark = false }) => {
+	const href = isBookmark
+		? `/bookmarks/tag/${slugify(label)}`
+		: `/tag/${slugify(label)}`
+	const onNavigate = useAnimationOnNavigate()
+
+	return (
+		<Link
+			className={styles.pill}
+			href={href}
+			onNavigate={(event) => onNavigate(event, href)}
+		>
+			{label}
+		</Link>
+	)
+}
 
 export default Pill

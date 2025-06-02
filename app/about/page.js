@@ -1,4 +1,4 @@
-import heroImage from '@assets/images/about.jpg'
+import heroImage from '@assets/images/kitkowjapan.webp'
 import Image from 'next/image'
 import Spacer from '@components/Spacer'
 import Button from '@components/Button'
@@ -15,7 +15,8 @@ const Page = () => (
 			quality={100}
 			src={heroImage}
 			alt="Michal Kotowski"
-			placeholder="blur"
+			width={1120}
+			height={500}
 		/>
 		<Spacer size="large" />
 		<h1>Hello, World!</h1>
@@ -29,14 +30,14 @@ const Page = () => (
 		</p>
 		<Spacer size="medium" />
 		<p>
-			Beyond the screen, I&apos;m deeply curious about the human mind —
+			Beyond the screen, I&apos;m deeply curious about the human mind -
 			particularly how mindfulness influences us and what drives our behavior,
-			especially in the context of status games
+			especially in the context of status games.
 		</p>
 		<Spacer size="medium" />
 		<p>
 			I’m incredibly grateful for where I am today and excited about what’s
-			ahead. Thanks for stopping by!
+			ahead, thanks for stopping by!
 		</p>
 		<Spacer size="large" />
 		<Button

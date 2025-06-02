@@ -14,7 +14,8 @@ import ContentfulImage from '../../../components/ContentfulImage'
 hljs.registerLanguage('javascript', javascript)
 
 export async function generateMetadata({ params }) {
-	const { writing } = await getWriting(params.slug)
+	const { slug } = await params
+	const { writing } = await getWriting(slug)
 
 	return {
 		title: `${writing.title} | Michał Kotowski`,
@@ -22,7 +23,8 @@ export async function generateMetadata({ params }) {
 }
 
 const Page = async ({ params }) => {
-	const { writing } = await getWriting(params.slug)
+	const { slug } = await params
+	const { writing } = await getWriting(slug)
 
 	const options = {
 		renderMark: {

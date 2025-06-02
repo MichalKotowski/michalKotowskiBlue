@@ -1,13 +1,11 @@
-import Writings from '@components/Writings'
-import Spacer from '@components/Spacer'
-import Link from 'next/link'
-import HomeHeader from '@components/HomeHeader'
 import { getWritings } from '../lib/api'
+import HomeHeader from '@components/HomeHeader'
+import HomeContent from '@components/HomeContent'
 
 export const metadata = {
 	title: 'Home | Michał Kotowski',
 	description:
-		"I'm Michał Kotowski, a web developer from Warsaw with experience in design and brand identity.",
+		"I'm Michał Kotowski, a software engineer from Warsaw with a background in design and brand identity",
 }
 
 const Page = async () => {
@@ -20,14 +18,7 @@ const Page = async () => {
 	return (
 		<>
 			<HomeHeader />
-			<p>
-				Welcome to my personal playground, a space where I experiment, break
-				things, and explore new ideas. I build this site for the thrill of
-				solving coding challenges, but it also serves as a{' '}
-				<Link href="/writings">knowledge hub</Link> for my future self. 😅
-			</p>
-			<Spacer size="huge" />
-			<Writings displayHeading={true} data={data} />
+			<HomeContent data={data} />
 		</>
 	)
 }

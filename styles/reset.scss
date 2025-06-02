@@ -189,3 +189,14 @@ ol {
 		@include paragraph;
 	}
 }
+
+strong {
+	font-weight: 600;
+	color: $white;
+}
+
+div#transition {
+	@include max(920px) {
+		transform: none !important;
+	}
+}

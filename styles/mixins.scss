@@ -1,3 +1,5 @@
+@use './tokens' as *;
+
 @mixin min($min) {
 	@media screen and (min-width: $min) {
 		@content;
@@ -48,7 +50,7 @@
 
 @mixin paragraph {
 	font-size: 1.6rem;
-	line-height: 3.6rem;
+	line-height: 3.2rem;
 	& > a {
 		font-weight: 600;
 		color: $primaryBlue;

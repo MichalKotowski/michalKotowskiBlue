@@ -5,13 +5,16 @@ import FlexWrapper from '@components/FlexWrapper'
 import { getWritingsByTag } from '../../../lib/api'
 
 export async function generateMetadata({ params }) {
+	const { slug } = await params
+
 	return {
-		title: `${params.slug.replaceAll('-', ' ')} | Michał Kotowski`,
+		title: `${slug.replaceAll('-', ' ')} | Michał Kotowski`,
 	}
 }
 
 const Page = async ({ params }) => {
-	const data = await getWritingsByTag(params.slug)
+	const { slug } = await params
+	const data = await getWritingsByTag(slug)
 
 	if (!data) {
 		return <p>Loading...</p>
@@ -24,7 +27,7 @@ const Page = async ({ params }) => {
 			<FlexWrapper type="tag">
 				<h1>Tag</h1>
 				<span></span>
-				<h1>{params.slug.replaceAll('-', ' ')}</h1>
+				<h1>{slug.replaceAll('-', ' ')}</h1>
 			</FlexWrapper>
 			<Spacer size="large" />
 			<Writings showTags={true} data={data} />

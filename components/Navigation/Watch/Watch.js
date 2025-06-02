@@ -1,38 +1,24 @@
+'use client'
+
 import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
 import styles from './Watch.module.scss'
 
-const variants = {
-	hidden: { opacity: 0, x: '-30px' },
-	visible: { opacity: 1, x: '0px' },
-}
-
 const Watch = () => {
-	const [time, setTime] = useState(false)
+	const [time, setTime] = useState('')
 
 	useEffect(() => {
-		setInterval(() => {
-			const date = new Date()
-			const convertedTime = date.toLocaleTimeString()
-			setTime(convertedTime)
+		setTime(new Date().toLocaleTimeString())
+		const interval = setInterval(() => {
+			setTime(new Date().toLocaleTimeString())
 		}, 1000)
-	})
+		return () => clearInterval(interval)
+	}, [])
 
 	return (
-		<motion.div
-			className={styles.watch}
-			variants={variants}
-			animate={!time ? 'hidden' : 'visible'}
-			transition={{
-				type: 'spring',
-				duration: 0.1,
-				stiffness: 75,
-			}}
-			initial={false}
-		>
+		<div className={styles.watch}>
 			<span>女児</span>
 			{time}
-		</motion.div>
+		</div>
 	)
 }
 

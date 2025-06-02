@@ -1,11 +1,16 @@
+'use client'
+
 import Button from '@components/Button'
 import Pill from '@components/Pill'
 import Flag from '@components/Flag'
 import Link from 'next/link'
 import { toRomanDate } from '../../lib/utilities'
 import styles from './Writings.module.scss'
+import { useAnimationOnNavigate } from '@hooks/useAnimationOnNavigate'
 
 const Writings = ({ displayHeading = false, showTags = false, data }) => {
+	const onNavigate = useAnimationOnNavigate()
+
 	return (
 		<div className={styles.writings}>
 			{displayHeading && (
@@ -23,7 +28,13 @@ const Writings = ({ displayHeading = false, showTags = false, data }) => {
 								<Flag english={writing.english} />
 								<p>{toRomanDate(writing.date)}</p>
 							</div>
-							<Link className={styles.title} href={`/writings/${writing.slug}`}>
+							<Link
+								className={styles.title}
+								href={`/writings/${writing.slug}`}
+								onNavigate={(event) =>
+									onNavigate(event, `/writings/${writing.slug}`)
+								}
+							>
 								{writing.title}
 							</Link>
 							{showTags && writing.tags && (

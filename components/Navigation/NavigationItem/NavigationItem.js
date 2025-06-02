@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import styles from './NavigationItem.module.scss'
 
-const NavigationItem = ({ path, icon, label, onClick }) => {
+const NavigationItem = ({ path, icon, label, onNavigate }) => {
 	const currentPath = usePathname()
 	const writingTypes = ['/writings', '/tag', '/language']
 	const isWritingType = () =>
@@ -18,7 +18,7 @@ const NavigationItem = ({ path, icon, label, onClick }) => {
 					? styles.active
 					: ''
 			}`}
-			onClick={onClick}
+			onNavigate={onNavigate}
 		>
 			<span className={styles[icon]}></span>
 			<p>{label}</p>

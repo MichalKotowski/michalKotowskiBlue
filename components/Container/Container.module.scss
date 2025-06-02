@@ -6,7 +6,9 @@
 	grid-column-gap: 120px;
 
 	@include max(980px) {
-		max-width: 980px;
+		overflow-x: hidden;
+		width: 100vw;
+		max-width: 100vw;
 		padding: 0px 20px;
 		grid-template-columns: 1fr;
 		grid-column-gap: 0;
