@@ -1,5 +1,5 @@
 .contentWrapper {
-	padding: 120px 0;
+	padding: 0 0 120px;
 	height: 100%;
 
 	@include min(981px) {
@@ -8,7 +8,7 @@
 	}
 
 	@include max(980px) {
-		padding: 60px 0;
+		padding: 0 0 60px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

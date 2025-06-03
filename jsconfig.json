@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
-		"module": "ES6",
+		"module": "es2022",
+		"lib": ["es2022"],
 		"moduleResolution": "Node",
 		"jsx": "preserve",
 		"strictNullChecks": true,

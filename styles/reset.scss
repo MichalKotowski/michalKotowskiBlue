@@ -196,6 +196,7 @@ strong {
 }
 
 div#transition {
+	height: 100%;
 	@include max(920px) {
 		transform: none !important;
 	}

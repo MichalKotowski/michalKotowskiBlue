@@ -13,4 +13,12 @@
 	&.huge {
 		height: 80px;
 	}
+
+	&.top {
+		height: 120px;
+
+		@include max(980px) {
+			height: 60px;
+		}
+	}
 }
