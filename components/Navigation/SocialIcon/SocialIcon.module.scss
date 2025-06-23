@@ -14,21 +14,17 @@
 
 	span {
 		display: inline-block;
-		mask-size: 20px 20px;
+		mask-size: 20px 19px;
+		height: 19px;
 		width: 20px;
-		height: 20px;
 		background-color: $white;
 		opacity: 0.6;
 
 		&.github {
 			mask-image: url('../../../assets/icons/github.svg');
-			mask-size: 20px 19px;
-			height: 19px;
 		}
 
 		&.goodreads {
-			mask-size: 20px 19px;
-			height: 19px;
 			mask-image: url('../../../assets/icons/book.svg');
 		}
 
