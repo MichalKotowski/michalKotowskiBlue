@@ -72,6 +72,7 @@
 	}
 
 	&.active {
+		pointer-events: none;
 		span {
 			background-color: $primaryBlue;
 			margin-right: 30px;

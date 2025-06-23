@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import { TransitionContext } from '@context/TransitionContext'
 import { useRouter } from 'next/navigation'
 
@@ -13,9 +13,14 @@ export const useAnimationOnNavigate = () => {
 	const [isNavigationDisabled, setIsNavigationDisabled] = useState(false)
 	const router = useRouter()
 
+	useEffect(() => {
+			animate(scope?.current, enterAnimation, transitionSettings).then(() => {
+				setIsNavigationDisabled(false)
+			})
+	}, [router])
+	
 	const onNavigate = async (event: { preventDefault: () => void } , path: string) => {
 		event.preventDefault()
-
 		if (isNavigationDisabled) {
 			return
 		}
@@ -27,7 +32,6 @@ export const useAnimationOnNavigate = () => {
 		})
 
 		setTimeout(() => {
-			animate(scope?.current, enterAnimation, transitionSettings)
 			setIsNavigationDisabled(false)
 		}, 350)
 	}
