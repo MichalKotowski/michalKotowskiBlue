@@ -3,6 +3,7 @@ import Writings from '@components/Writings'
 import Spacer from '@components/Spacer'
 import FlexWrapper from '@components/FlexWrapper'
 import { getWritingsByTag } from '../../../lib/api'
+import Button from '@components/Button'
 
 export async function generateMetadata({ params }) {
 	const { slug } = await params
@@ -23,6 +24,8 @@ const Page = async ({ params }) => {
 	return (
 		<>
 			<Spacer size="top" />
+			<Button path="/writings" label="Writings" type="back" />
+			<Spacer size="large" />
 			<TotalWritings type="writing" amount={data.length} />
 			<Spacer />
 			<FlexWrapper type="tag">

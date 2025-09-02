@@ -3,11 +3,14 @@ import Writings from '@components/Writings'
 import Spacer from '@components/Spacer'
 import FlexWrapper from '@components/FlexWrapper'
 import { getWritingsByLanguage } from '../../../lib/api'
+import Button from '@components/Button'
 
 export async function generateMetadata({ params }) {
 	const { slug } = await params
+	const title = slug === 'english' ? 'English' : 'Polish'
+
 	return {
-		title: `${slug} | Michał Kotowski`,
+		title: `${title} | Michał Kotowski`,
 	}
 }
 
@@ -22,6 +25,8 @@ const Page = async ({ params }) => {
 	return (
 		<>
 			<Spacer size="top" />
+			<Button path="/writings" label="Writings" type="back" />
+			<Spacer size="large" />
 			<TotalWritings type="writing" amount={data.length} />
 			<Spacer />
 			<FlexWrapper type="tag">

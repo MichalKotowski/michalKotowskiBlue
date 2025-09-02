@@ -3,6 +3,7 @@ import Bookmarks from '@components/Bookmarks'
 import Spacer from '@components/Spacer'
 import FlexWrapper from '@components/FlexWrapper'
 import { getBookmarksByTag } from '../../../../lib/api'
+import Button from '@components/Button'
 
 export async function generateMetadata({ params }) {
 	const { slug } = await params
@@ -22,6 +23,8 @@ const Page = async ({ params }) => {
 	return (
 		<>
 			<Spacer size="top" />
+			<Button path="/writings" label="Writings" type="back" />
+			<Spacer size="large" />
 			<TotalWritings type="bookmark" amount={data.length} />
 			<Spacer />
 			<FlexWrapper type="tag">

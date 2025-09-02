@@ -60,7 +60,7 @@ const Page = async ({ params }) => {
 		<>
 			<Spacer size="top" />
 			<FlexWrapper>
-				<Button path="/writings" label="Go back" type="back" />
+				<Button path="/writings" label="Writings" type="back" />
 				<Flag english={writing.english} />
 			</FlexWrapper>
 			<Spacer size="medium" />

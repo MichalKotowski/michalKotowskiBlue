@@ -23,6 +23,11 @@
 	&.polish {
 		background-image: url('../../assets/icons/polish.svg');
 	}
+
+	&.disabled {
+		pointer-events: none;
+		cursor: default;
+	}
 }
 
 h1 + .flag {

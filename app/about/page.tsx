@@ -18,6 +18,7 @@ const Page = () => (
 			alt="Michal Kotowski"
 			width={1120}
 			height={500}
+			placeholder="blur"
 		/>
 		<Spacer size="large" />
 		<h1>Hello, World!</h1>
