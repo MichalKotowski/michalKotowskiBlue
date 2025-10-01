@@ -22,8 +22,9 @@ const Page = async () => {
 		<>
 			<Spacer size="top" />
 			<TotalWritings type="bookmark" amount={data.length} />
-			<Spacer />
-			<h1>Bookmarks</h1>
+			<Spacer size="medium" />
+			<h1>Finds and Favorites</h1>
+			<Spacer size="small" />
 			<FlexWrapper type="bookmark">
 				<p>Last update</p>
 				<span></span>

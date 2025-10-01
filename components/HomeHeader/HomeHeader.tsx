@@ -17,13 +17,13 @@ const HomeHeader = () => {
 					Michał Kotowski
 				</Link>
 				, a software engineer from Warsaw with a background in design and brand
-				identity.
+				identity
 			</h1>
 			<Image
 				quality={100}
 				width={200}
 				src={kitkow}
-				alt="Sleeping cat"
+				alt="A sleeping cat"
 				className={styles.cat}
 			/>
 		</div>

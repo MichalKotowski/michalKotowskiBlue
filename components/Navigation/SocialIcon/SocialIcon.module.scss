@@ -6,7 +6,7 @@
 	height: 40px;
 	border-radius: 4px;
 	background-color: $darkGrey;
-	transition: 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out;
 
 	&:not(:last-child) {
 		margin-right: 10px;
@@ -14,33 +14,35 @@
 
 	span {
 		display: inline-block;
-		mask-size: 20px 19px;
-		height: 19px;
-		width: 20px;
+		mask-size: 24px 24px;
+		height: 24px;
+		width: 24px;
 		background-color: $white;
 		opacity: 0.6;
 
 		&.github {
-			mask-image: url('../../../assets/icons/github.svg');
+			mask-image: url('../../../assets/icons-new/github.svg');
 		}
 
 		&.goodreads {
-			mask-image: url('../../../assets/icons/book.svg');
+			mask-image: url('../../../assets/icons-new/goodreads.svg');
 		}
 
-		&.chess {
-			mask-image: url('../../../assets/icons/chess.svg');
+		&.youtube {
+			mask-image: url('../../../assets/icons-new/youtube.svg');
 		}
 
-		&.email {
-			mask-size: 20px 16px;
-			height: 16px;
-			mask-image: url('../../../assets/icons/email.svg');
+		&.mail {
+			mask-image: url('../../../assets/icons-new/mail.svg');
 		}
 
 		&.instagram {
-			mask-image: url('../../../assets/icons/instagram.svg');
+			mask-image: url('../../../assets/icons-new/instagram.svg');
 		}
+	}
+
+	&:active {
+		transform: scale(0.97);
 	}
 
 	@include min(981px) {

@@ -7,7 +7,7 @@ import Writings from '@components/Writings'
 import { Writing } from '../../types/content'
 
 interface HomeContent {
-	data: Writing[],
+	data: Writing[]
 }
 
 const HomeContent = ({ data }: HomeContent) => {
@@ -25,7 +25,7 @@ const HomeContent = ({ data }: HomeContent) => {
 				>
 					knowledge hub
 				</Link>{' '}
-				for my future self. 😅
+				for my future self 😅
 			</p>
 			<Spacer size="huge" />
 			<Writings displayHeading={true} data={data} />

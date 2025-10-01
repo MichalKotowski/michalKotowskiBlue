@@ -1,9 +1,14 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { NavigationItem } from '../NavigationConstants'
+import { NavigationItemProps } from '../NavigationConstants'
 import styles from './NavigationItem.module.scss'
 
-const NavigationItem = ({ path, icon, label, onNavigate }: NavigationItem) => {
+const NavigationItem = ({
+	path,
+	icon,
+	label,
+	onNavigate,
+}: NavigationItemProps) => {
 	const currentPath = usePathname()
 	const writingTypes = ['/writings', '/tag', '/language']
 	const isWritingType = () =>

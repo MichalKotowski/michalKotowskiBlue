@@ -1,11 +1,11 @@
-export interface NavigationItem {
+export interface NavigationItemProps {
 	path: string
 	icon: string
 	label: string
 	onNavigate?: (event: Event | { preventDefault: () => void }) => void
 }
 
-export const navigationItems: NavigationItem[] = [
+export const navigationItems: NavigationItemProps[] = [
 	{
 		path: '/',
 		icon: 'home',
@@ -39,12 +39,12 @@ export const socialItems: SocialItem[] = [
 		icon: 'github',
 	},
 	{
-		href: 'https://www.goodreads.com/review/list/70574245-micha-kotowski?shelf=read',
+		href: 'https://www.goodreads.com/kocie',
 		icon: 'goodreads',
 	},
 	{
-		href: 'https://www.chess.com/member/ipisay',
-		icon: 'chess',
+		href: 'https://www.youtube.com/@kitku420',
+		icon: 'youtube',
 	},
 	{
 		href: 'https://www.instagram.com/kocie420',
@@ -52,6 +52,6 @@ export const socialItems: SocialItem[] = [
 	},
 	{
 		href: 'mailto:hello@michalkotowski.pl',
-		icon: 'email',
+		icon: 'mail',
 	},
 ]
