@@ -1,3 +1,5 @@
+'use client'
+
 import Pill from '@components/Pill'
 import Link from 'next/link'
 import styles from './Bookmarks.module.scss'

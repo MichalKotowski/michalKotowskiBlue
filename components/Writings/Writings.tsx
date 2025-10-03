@@ -15,8 +15,8 @@ interface WritingsProps {
 	displayHeading?: boolean
 	showTags?: boolean
 	data: Writing[]
-	filters: FiltersState
-	handleCategoryChange: (category: string) => void
+	filters?: FiltersState
+	handleCategoryChange?: (category: string) => void
 }
 
 const Writings = ({
@@ -99,7 +99,9 @@ const Writings = ({
 												<Pill
 													key={tag}
 													label={tag}
-													onClick={() => handleCategoryChange(tag)}
+													onClick={() =>
+														handleCategoryChange && handleCategoryChange(tag)
+													}
 												/>
 											))}
 										</div>
