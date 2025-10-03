@@ -8,9 +8,35 @@
 	transition: 0.2s ease-in-out;
 	display: inline-block;
 	margin-top: 10px;
+	cursor: pointer;
 
 	&:hover {
 		color: $white;
 		border: 1px solid $primaryBlue;
 	}
+
+	&.active {
+		background: linear-gradient($black, $black) padding-box,
+			linear-gradient(var(--angle), $black, $primaryBlue) border-box;
+		animation: 5s rotate linear infinite;
+
+		color: $white;
+	}
+
+	&.unclickable {
+		cursor: default;
+		pointer-events: none;
+	}
+}
+
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+
+@property --angle {
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: false;
 }

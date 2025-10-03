@@ -58,10 +58,26 @@ function extractWriting(fetchResponse: { data: { writingCollection: { items: any
 }
 
 function extractWritingEntries(fetchResponse: { data: { writingCollection: { items: any } } }) {
+  if (fetchResponse?.data?.writingCollection?.items) {
+    fetchResponse.data.writingCollection.items.forEach((item: any) => {
+      if (Array.isArray(item.tags)) {
+        item.tags = item.tags.map((tag: string) => tag.replace(/-/g, ' '))
+      }
+    })
+  }
+
 	return fetchResponse?.data?.writingCollection?.items
 }
 
 function extractBookmarkEntries(fetchResponse: { data: { bookmarkCollection: { items: any } } }) {
+  if (fetchResponse?.data?.bookmarkCollection?.items) {
+    fetchResponse.data.bookmarkCollection.items.forEach((item: any) => {
+      if (Array.isArray(item.tags)) {
+        item.tags = item.tags.map((tag: string) => tag.replace(/-/g, ' '))
+      }
+    })
+  }
+
 	return fetchResponse?.data?.bookmarkCollection?.items
 }
 

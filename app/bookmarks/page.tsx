@@ -1,9 +1,5 @@
-import TotalWritings from '@components/TotalWritings'
-import Bookmarks from '@components/Bookmarks'
-import Spacer from '@components/Spacer'
 import { getBookmarks } from '../../lib/api'
-import FlexWrapper from '@components/FlexWrapper'
-import { toRomanDate } from '../../lib/utilities'
+import BookmarksContent from '@components/BookmarksContent'
 
 export const metadata = {
 	title: 'Bookmarks | Michał Kotowski',
@@ -18,22 +14,7 @@ const Page = async () => {
 		return <p>Loading...</p>
 	}
 
-	return (
-		<>
-			<Spacer size="top" />
-			<TotalWritings type="bookmark" amount={data.length} />
-			<Spacer size="medium" />
-			<h1>Finds and Favorites</h1>
-			<Spacer size="small" />
-			<FlexWrapper type="bookmark">
-				<p>Last update</p>
-				<span></span>
-				<p>{toRomanDate(data[0].date)}</p>
-			</FlexWrapper>
-			<Spacer size="large" />
-			<Bookmarks data={data} />
-		</>
-	)
+	return <BookmarksContent data={data} />
 }
 
 export default Page

@@ -5,3 +5,11 @@ export interface Writing {
   title: string
   tags: string[] 
 }
+
+export interface Bookmark { 
+  slug: string
+  date: string
+  title: string
+  url: string
+  tags: string[]
+}

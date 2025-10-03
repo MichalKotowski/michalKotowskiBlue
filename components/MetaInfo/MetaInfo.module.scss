@@ -1,0 +1,34 @@
+.heading {
+	display: flex;
+	align-items: flex-start;
+	min-height: 20px;
+
+	.label {
+		@include pill;
+		color: $text;
+		min-width: 70px;
+	}
+
+	.separator {
+		display: inline-block;
+		width: 1px;
+		height: 14px;
+		background-color: $primaryBlue;
+		margin: 0 20px 0 10px;
+		min-width: 1px;
+	}
+
+	.value {
+		@include pill;
+		color: $white;
+		font-weight: 600;
+	}
+
+	.children {
+		margin-top: -10px;
+	}
+
+	&.centered {
+		align-items: center;
+	}
+}

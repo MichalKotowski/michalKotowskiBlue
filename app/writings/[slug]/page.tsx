@@ -10,6 +10,9 @@ import Flag from '@components/Flag'
 import FlexWrapper from '@components/FlexWrapper'
 import Button from '@components/Button'
 import ContentfulImage from '../../../components/ContentfulImage'
+import MetaInfo from '@components/MetaInfo'
+import { toRomanDate } from '../../../lib/utilities'
+import Pill from '@components/Pill'
 
 hljs.registerLanguage('javascript', javascript)
 
@@ -59,13 +62,11 @@ const Page = async ({ params }) => {
 	return (
 		<>
 			<Spacer size="top" />
-			<FlexWrapper>
-				<Button path="/writings" label="Writings" type="back" />
-				<Flag english={writing.english} />
-			</FlexWrapper>
+			<Button path="/writings" label="Writings" type="back" />
 			<Spacer size="medium" />
 			<h1>{writing.title}</h1>
-			{writing.tags && <Tags tags={writing.tags} />}
+			<Spacer size="medium" />
+			{writing.tags && <Tags date={writing.date} tags={writing.tags} />}
 			<Spacer size="large" />
 			<article>
 				{documentToReactComponents(writing.content.json, options)}

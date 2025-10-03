@@ -7,10 +7,7 @@
 
 	.writing {
 		display: flex;
-
-		&:not(:last-child) {
-			margin-bottom: 18px;
-		}
+		margin-top: 20px;
 
 		.rectangle {
 			width: 16px;

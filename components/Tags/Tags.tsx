@@ -1,19 +1,27 @@
+import MetaInfo from '@components/MetaInfo'
+import { toRomanDate } from '../../lib/utilities'
 import styles from './Tags.module.scss'
 import Pill from '@components/Pill'
 
-interface Tags {
+interface TagsProps {
 	tags: string[]
+	date: string
 }
 
-const Tags = ({ tags }: Tags) => {
+const Tags = ({ tags, date }: TagsProps) => {
 	return (
-		<div className={styles.tags}>
-			<p>Tags</p>
-			<span></span>
-			<div className={styles.tagsList}>
-				{tags.map((tag: string) => (
-					<Pill key={tag} label={tag.replaceAll('-', ' ')} />
-				))}
+		<div className={styles.tagsWrapper}>
+			<div className={styles.tag}>
+				<MetaInfo label="Date" value={toRomanDate(date)} />
+			</div>
+			<div className={styles.tag}>
+				<MetaInfo label="Category">
+					<div className={styles.tags}>
+						{tags.map((category: string) => (
+							<Pill key={category} label={category} />
+						))}
+					</div>
+				</MetaInfo>
 			</div>
 		</div>
 	)

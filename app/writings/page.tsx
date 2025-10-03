@@ -1,9 +1,5 @@
-import TotalWritings from '@components/TotalWritings'
-import Writings from '@components/Writings'
-import Spacer from '@components/Spacer'
 import { getWritings } from '../../lib/api'
-import FlexWrapper from '@components/FlexWrapper'
-import { toRomanDate } from '../../lib/utilities'
+import WritingsContent from '@components/WritingsContent'
 
 export const metadata = {
 	title: 'Writings | Michał Kotowski',
@@ -18,22 +14,7 @@ const Page = async () => {
 		return <p>Loading...</p>
 	}
 
-	return (
-		<>
-			<Spacer size="top" />
-			<TotalWritings type="writing" amount={data.length} />
-			<Spacer size="medium" />
-			<h1>Notes and Reflections</h1>
-			<Spacer size="small" />
-			<FlexWrapper type="bookmark">
-				<p>Last update</p>
-				<span></span>
-				<p>{toRomanDate(data[0].date)}</p>
-			</FlexWrapper>
-			<Spacer size="large" />
-			<Writings showTags={true} data={data} />
-		</>
-	)
+	return <WritingsContent data={data} />
 }
 
 export default Page
