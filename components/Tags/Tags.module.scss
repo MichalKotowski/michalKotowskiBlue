@@ -8,6 +8,10 @@
 
 		&:not(:last-child) {
 			margin-bottom: 15px;
+
+			@include max(600px) {
+				margin-bottom: 25px;
+			}
 		}
 
 		.tags {

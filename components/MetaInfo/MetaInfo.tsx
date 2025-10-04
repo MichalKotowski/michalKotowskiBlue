@@ -9,11 +9,11 @@ interface MetaInfoProps {
 
 const MetaInfo = ({ label, value, children }: MetaInfoProps) => {
 	return (
-		<div className={styles.heading}>
+		<div className={styles.metaInfo}>
 			<p className={styles.label}>{label}</p>
 			<div className={styles.separator}></div>
 			{value && <p className={styles.value}>{value}</p>}
-			<div className={styles.children}>{children}</div>
+			{children && <div className={styles.children}>{children}</div>}
 		</div>
 	)
 }

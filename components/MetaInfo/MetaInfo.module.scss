@@ -1,7 +1,11 @@
-.heading {
+.metaInfo {
 	display: flex;
 	align-items: flex-start;
 	min-height: 20px;
+
+	@include max(600px) {
+		flex-direction: column;
+	}
 
 	.label {
 		@include pill;
@@ -16,16 +20,28 @@
 		background-color: $primaryBlue;
 		margin: 0 20px 0 10px;
 		min-width: 1px;
+
+		@include max(600px) {
+			display: none;
+		}
 	}
 
 	.value {
 		@include pill;
 		color: $white;
 		font-weight: 600;
+
+		@include max(600px) {
+			margin-top: 15px;
+		}
 	}
 
 	.children {
 		margin-top: -10px;
+
+		@include max(600px) {
+			margin-top: 10px;
+		}
 	}
 
 	&.centered {

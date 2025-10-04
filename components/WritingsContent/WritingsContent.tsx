@@ -47,7 +47,7 @@ const WritingsContent = ({ data }: WritingsContentProps) => {
 			<TotalWritings type="writing" amount={data.length} />
 			<Spacer size="medium" />
 			<h1>Notes and Reflections</h1>
-			<Spacer size="large" />
+			<Spacer size="medium" />
 			<Filters
 				filters={filters}
 				lastUpdate={toRomanDate(data[0].date)}

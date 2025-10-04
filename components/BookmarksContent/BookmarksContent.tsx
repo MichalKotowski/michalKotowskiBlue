@@ -37,7 +37,7 @@ const BookmarksContent = ({ data }: BookmarksContentProps) => {
 			<TotalWritings type="bookmark" amount={data.length} />
 			<Spacer size="medium" />
 			<h1>Finds and Favourites</h1>
-			<Spacer size="large" />
+			<Spacer size="medium" />
 			<Filters
 				filters={filters}
 				lastUpdate={toRomanDate(data[0].date)}
