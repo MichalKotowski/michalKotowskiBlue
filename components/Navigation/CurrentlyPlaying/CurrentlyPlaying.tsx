@@ -22,14 +22,6 @@ const CurrentlyPlaying = () => {
 	}, [])
 
 	useEffect(() => {
-		if (data && data.isPlaying) {
-			setIsPlaying(true)
-		} else {
-			setIsPlaying(false)
-		}
-	}, [data])
-
-	useEffect(() => {
 		const handleWindowResize = () => {
 			setWindowWidth(window.innerWidth)
 		}
@@ -48,12 +40,29 @@ const CurrentlyPlaying = () => {
 			return 238
 		}
 
-		setIsOverflow(ref.current?.offsetWidth > maxElementWidth())
+		// Use a timeout to wait for the animation to finish before measuring
+		const checkOverflow = () => {
+			if (ref.current) {
+				setIsOverflow(ref.current.scrollWidth > maxElementWidth())
+			}
+		}
+
+		// Wait for next paint after data changes or window resizes
+		const timeoutId = setTimeout(checkOverflow, 100)
 
 		return () => {
 			window.removeEventListener('resize', handleWindowResize)
+			clearTimeout(timeoutId)
 		}
 	}, [ref, data, windowWidth])
+
+	useEffect(() => {
+		if (data && data.isPlaying) {
+			setIsPlaying(true)
+		} else {
+			setIsPlaying(false)
+		}
+	}, [data])
 
 	return (
 		<AnimatePresence mode="wait">
