@@ -10,7 +10,6 @@ async function fetcher(url: RequestInfo | URL) {
 
 const CurrentlyPlaying = () => {
 	const isFirstRenderRef = useRef<boolean>(true)
-	const ref = useRef<any>(null)
 	const [isOverflow, setIsOverflow] = useState<boolean | undefined>(undefined)
 	const [windowWidth, setWindowWidth] = useState<number | undefined>(undefined)
 	const [isPlaying, setIsPlaying] = useState<boolean>(false)
@@ -42,9 +41,11 @@ const CurrentlyPlaying = () => {
 
 		// Use a timeout to wait for the animation to finish before measuring
 		const checkOverflow = () => {
-			if (ref.current) {
-				setIsOverflow(ref.current.scrollWidth > maxElementWidth())
-			}
+			const text = `${data.title} by ${data.artist}` || ''
+			// Estimate width using average character width
+			const avgCharWidth = 7
+			const estimatedWidth = text.length * avgCharWidth
+			setIsOverflow(estimatedWidth > maxElementWidth())
 		}
 
 		// Wait for next paint after data changes or window resizes
@@ -63,8 +64,6 @@ const CurrentlyPlaying = () => {
 			setIsPlaying(false)
 		}
 	}, [data])
-
-	console.log('data', data, isPlaying, ref.current.scrollWidth, ref.current)
 
 	return (
 		<AnimatePresence mode="wait">
@@ -88,9 +87,6 @@ const CurrentlyPlaying = () => {
 				</motion.div>
 			) : (
 				<>
-					<p className={styles.hiddenText} ref={ref}>
-						<strong>{data.title}</strong> by <strong>{data.artist}</strong>
-					</p>
 					<motion.div
 						initial={{ x: -15, opacity: 0 }}
 						animate={{ x: 0, opacity: 1 }}
