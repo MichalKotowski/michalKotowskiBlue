@@ -85,50 +85,52 @@ const CurrentlyPlaying = () => {
 					</div>
 				</motion.div>
 			) : (
-				<motion.div
-					initial={{ x: -15, opacity: 0 }}
-					animate={{ x: 0, opacity: 1 }}
-					exit={{ x: 15, opacity: 0 }}
-					transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-					key="playing"
-				>
+				<>
 					<p className={styles.hiddenText} ref={ref}>
 						<strong>{data.title}</strong> by <strong>{data.artist}</strong>
 					</p>
-					<div className={styles.currentlyPlaying}>
-						<div className={styles.iconWrapper}>
-							<div className={styles.icon}>
-								<span />
-								<span />
-								<span />
+					<motion.div
+						initial={{ x: -15, opacity: 0 }}
+						animate={{ x: 0, opacity: 1 }}
+						exit={{ x: 15, opacity: 0 }}
+						transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+						key="playing"
+					>
+						<div className={styles.currentlyPlaying}>
+							<div className={styles.iconWrapper}>
+								<div className={styles.icon}>
+									<span />
+									<span />
+									<span />
+								</div>
 							</div>
-						</div>
-						<div className={styles.text}>
-							{isOverflow ? (
-								<Marquee
-									pauseOnHover={true}
-									gradient={windowWidth && windowWidth < 981 ? false : true}
-									gradientColor={'rgb(5, 5, 7)'}
-									gradientWidth={20}
-									speed={30}
-								>
+							<div className={styles.text}>
+								{isOverflow ? (
+									<Marquee
+										pauseOnHover={true}
+										gradient={windowWidth && windowWidth < 981 ? false : true}
+										gradientColor={'rgb(5, 5, 7)'}
+										gradientWidth={20}
+										speed={30}
+									>
+										<a href={data.songUrl} target="_blank">
+											<strong>{data.title}</strong> by{' '}
+											<strong>
+												{data.artist}
+												<span>&nbsp;|&nbsp;</span>
+											</strong>
+										</a>
+									</Marquee>
+								) : (
 									<a href={data.songUrl} target="_blank">
 										<strong>{data.title}</strong> by{' '}
-										<strong>
-											{data.artist}
-											<span>&nbsp;|&nbsp;</span>
-										</strong>
+										<strong>{data.artist}</strong>
 									</a>
-								</Marquee>
-							) : (
-								<a href={data.songUrl} target="_blank">
-									<strong>{data.title}</strong> by{' '}
-									<strong>{data.artist}</strong>
-								</a>
-							)}
+								)}
+							</div>
 						</div>
-					</div>
-				</motion.div>
+					</motion.div>
+				</>
 			)}
 		</AnimatePresence>
 	)
