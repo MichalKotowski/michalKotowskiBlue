@@ -57,7 +57,7 @@ const CurrentlyPlaying = () => {
 			window.removeEventListener('resize', handleWindowResize)
 			clearTimeout(timeoutId)
 		}
-	}, [data, windowWidth, isPlaying])
+	}, [data, windowWidth, isPlaying, isFirstRenderRef.current])
 
 	useEffect(() => {
 		if (data && data.isPlaying) {
