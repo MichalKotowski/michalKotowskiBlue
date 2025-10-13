@@ -26,35 +26,48 @@
 		height: 20px;
 		background-image: url('../../../assets/icons/spotify.svg');
 		background-size: 20px 20px;
+		min-height: 20px;
+		min-width: 20px;
 	}
 
-	.icon {
-		position: relative;
+	.iconWrapper {
+		min-height: 20px;
+		min-width: 20px;
 		display: flex;
-		justify-content: space-between;
-		width: 14px;
-		min-width: 14px;
-		height: 14px;
+		justify-content: center;
+		align-items: center;
 
-		span {
-			width: 4px;
-			height: 100%;
-			background-color: $primaryBlue;
-			border-radius: 4px;
-			transform-origin: bottom;
-			animation: bounce 2.2s ease infinite alternate;
+		.icon {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			width: 14px;
+			min-width: 14px;
+			height: 14px;
 
-			&:nth-of-type(2) {
-				animation-delay: -2.2s;
-			}
+			span {
+				width: 4px;
+				height: 100%;
+				background-color: $primaryBlue;
+				border-radius: 4px;
+				transform-origin: bottom;
+				animation: bounce 2.2s ease infinite alternate;
 
-			&:nth-of-type(3) {
-				animation-delay: -3.7s;
+				&:nth-of-type(2) {
+					animation-delay: -2.2s;
+				}
+
+				&:nth-of-type(3) {
+					animation-delay: -3.7s;
+				}
 			}
 		}
 	}
 
 	.text {
+		min-height: 20px;
+		display: flex;
+		align-items: center;
 		margin-left: 8px;
 		width: 238px;
 
