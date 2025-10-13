@@ -72,11 +72,11 @@
 		width: 232px;
 
 		@include max(980px) {
-			width: 538px;
+			width: 532px;
 		}
 
 		@include max(600px) {
-			width: calc(100vw - 62px);
+			width: calc(100vw - 68px);
 		}
 
 		p,

@@ -112,6 +112,7 @@ const CurrentlyPlaying = () => {
 										gradientColor={'rgb(5, 5, 7)'}
 										gradientWidth={20}
 										speed={30}
+										autoFill={true}
 									>
 										<a href={data.songUrl} target="_blank">
 											<strong>{data.title}</strong> by{' '}
