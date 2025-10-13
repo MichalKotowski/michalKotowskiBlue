@@ -10,12 +10,12 @@ async function fetcher(url: RequestInfo | URL) {
 
 const CurrentlyPlaying = () => {
 	const isFirstRenderRef = useRef<boolean>(true)
+	const ref = useRef<any>(null)
 	const [isOverflow, setIsOverflow] = useState<boolean | undefined>(undefined)
 	const [windowWidth, setWindowWidth] = useState<number | undefined>(undefined)
 	const [isPlaying, setIsPlaying] = useState<boolean>(false)
 
 	const { data } = useSWR('/api/spotify/current', fetcher)
-	const ref = useRef<any>(null)
 
 	useEffect(() => {
 		isFirstRenderRef.current = false
@@ -54,7 +54,7 @@ const CurrentlyPlaying = () => {
 			window.removeEventListener('resize', handleWindowResize)
 			clearTimeout(timeoutId)
 		}
-	}, [ref, data, windowWidth])
+	}, [ref.current, data, windowWidth, isPlaying])
 
 	useEffect(() => {
 		if (data && data.isPlaying) {
@@ -63,6 +63,8 @@ const CurrentlyPlaying = () => {
 			setIsPlaying(false)
 		}
 	}, [data])
+
+	console.log('data', data, isPlaying, ref.current.scrollWidth, ref.current)
 
 	return (
 		<AnimatePresence mode="wait">
