@@ -29,14 +29,14 @@ const CurrentlyPlaying = () => {
 
 		const maxElementWidth = () => {
 			if (windowWidth && windowWidth < 601) {
-				return Number(windowWidth) - 62
+				return Number(windowWidth) - 68
 			}
 
 			if (windowWidth && windowWidth < 981) {
-				return 538
+				return 532
 			}
 
-			return 238
+			return 232
 		}
 
 		// Use a timeout to wait for the animation to finish before measuring
