@@ -25,6 +25,9 @@ const CurrentlyPlaying = () => {
 			setWindowWidth(window.innerWidth)
 		}
 
+		// Set initial window width on mount
+		handleWindowResize()
+		// Add event listener for window resize
 		window.addEventListener('resize', handleWindowResize)
 
 		const maxElementWidth = () => {
@@ -47,6 +50,7 @@ const CurrentlyPlaying = () => {
 			// Estimate width using average character width
 			const avgCharWidth = 7
 			const estimatedWidth = text.length * avgCharWidth
+
 			setIsOverflow(estimatedWidth > maxElementWidth())
 		}
 
