@@ -41,6 +41,8 @@ const CurrentlyPlaying = () => {
 
 		// Use a timeout to wait for the animation to finish before measuring
 		const checkOverflow = () => {
+			if (!data || !data.title || !data.artist) return false
+
 			const text = `${data.title} by ${data.artist}` || ''
 			// Estimate width using average character width
 			const avgCharWidth = 7
