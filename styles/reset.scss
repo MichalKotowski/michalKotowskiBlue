@@ -141,7 +141,9 @@ article {
 
 	div + div,
 	div + ul,
-	ul + div {
+	ul + div,
+	div + blockquote,
+	blockquote + div {
 		margin-top: 20px;
 	}
 
@@ -199,5 +201,31 @@ div#transition {
 	height: 100%;
 	@include max(920px) {
 		transform: none !important;
+	}
+}
+
+blockquote {
+	padding: 20px 20px 20px 40px;
+	border-left: 8px solid $primaryBlue;
+	position: relative;
+	background: $darkGrey;
+	border-radius: 4px;
+
+	&::before {
+		@include paragraph;
+		content: '\201C';
+		color: $primaryBlue;
+		position: absolute;
+		left: 10px;
+		top: 10px;
+		font-size: 50px;
+		font-style: italic;
+	}
+
+	div {
+		@include paragraph;
+		display: block;
+		font-style: italic;
+		color: $white;
 	}
 }

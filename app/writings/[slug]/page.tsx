@@ -6,13 +6,8 @@ import { MARKS, BLOCKS } from '@contentful/rich-text-types'
 import 'highlight.js/styles/tokyo-night-dark.css'
 import Tags from '@components/Tags'
 import Spacer from '@components/Spacer'
-import Flag from '@components/Flag'
-import FlexWrapper from '@components/FlexWrapper'
 import Button from '@components/Button'
 import ContentfulImage from '../../../components/ContentfulImage'
-import MetaInfo from '@components/MetaInfo'
-import { toRomanDate } from '../../../lib/utilities'
-import Pill from '@components/Pill'
 
 hljs.registerLanguage('javascript', javascript)
 
@@ -47,6 +42,7 @@ const Page = async ({ params }) => {
 		},
 		renderNode: {
 			[BLOCKS.PARAGRAPH]: (node, children) => <div>{children}</div>,
+			[BLOCKS.QUOTE]: (node, children) => <blockquote>{children}</blockquote>,
 			[BLOCKS.EMBEDDED_ASSET]: (node, children) =>
 				ContentfulImage(
 					node.data.target.sys.id,
