@@ -2,6 +2,7 @@ import heroImage from '@assets/images/kitkowjapan.webp'
 import Image from 'next/image'
 import Spacer from '@components/Spacer'
 import Button from '@components/Button'
+import FlexWrapper from '@components/FlexWrapper'
 
 export const metadata = {
 	title: 'About | Michał Kotowski',
@@ -27,27 +28,60 @@ const Page = () => (
 			I&apos;m <strong>Michał Kotowski</strong>, a software engineer from Warsaw
 			with a passion for crafting digital experiences. Whether I&apos;m writing
 			code, brainstorming ideas, or refining design systems, I take joy in
-			building things that are both functional and beautiful. My work blends
-			logic with creativity, and I wouldn&apos;t have it any other way.
+			building things that are both functional and beautiful
 		</p>
 		<Spacer size="medium" />
 		<p>
 			Beyond the screen, I&apos;m deeply curious about the human mind -
 			particularly how mindfulness influences us and what drives our behavior,
-			especially in the context of status games.
+			especially in the context of status games
 		</p>
 		<Spacer size="medium" />
 		<p>
 			I’m incredibly grateful for where I am today and excited about what’s
 			ahead, thanks for stopping by!
 		</p>
-		<Spacer size="large" />
-		<Button
-			path="https://open.spotify.com/user/21zcittwmfkp4km4habttajqa?si=89127a6b6f844bed"
-			label="Spotify"
-			type="primary"
-			target="_blank"
-		/>
+		<Spacer size="huge" />
+		<h2>Find me elsewhere</h2>
+		<Spacer size="medium" />
+		<FlexWrapper type="about">
+			<Button
+				path="https://open.spotify.com/user/21zcittwmfkp4km4habttajqa?si=89127a6b6f844bed"
+				label="spotify"
+				type="secondary"
+				target="_blank"
+			/>
+			<Button
+				path="https://www.chess.com/member/ikocie"
+				label="chess"
+				type="secondary"
+				target="_blank"
+			/>
+			<Button
+				path="https://github.com/MichalKotowski"
+				label="github"
+				type="secondary"
+				target="_blank"
+			/>
+			<Button
+				path="https://www.goodreads.com/kocie"
+				label="goodreads"
+				type="secondary"
+				target="_blank"
+			/>
+			<Button
+				path="https://www.youtube.com/@kitku420"
+				label="youtube"
+				type="secondary"
+				target="_blank"
+			/>
+			<Button
+				path="https://www.instagram.com/kocie420"
+				label="instagram"
+				type="secondary"
+				target="_blank"
+			/>
+		</FlexWrapper>
 	</>
 )
 

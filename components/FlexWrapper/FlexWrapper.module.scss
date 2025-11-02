@@ -48,4 +48,18 @@
 			font-weight: 600;
 		}
 	}
+
+	&.about {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-gap: 15px;
+
+		@include max(560px) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		@include max(420px) {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+		}
+	}
 }

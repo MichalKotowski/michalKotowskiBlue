@@ -2,20 +2,152 @@
 	@include buttonLabel;
 	display: inline-block;
 	color: $white;
-	padding: 9px 40px;
-	border: 3px solid $primaryBlue;
-	border-radius: 12px;
+	padding: 10px 20px;
+	border: 1px solid $primaryBlue;
+	border-radius: 4px;
 
 	&.primary {
 		background-color: $primaryBlue;
 		color: $black;
 	}
 
+	&.tertiary,
+	&.back {
+		.icon {
+			width: 14px;
+			height: 14px;
+			border-radius: 4px;
+			display: inline-block;
+			background-color: $primaryBlue;
+			position: relative;
+			margin-left: 12px;
+			overflow: hidden;
+
+			span {
+				display: inline-block;
+				mask-size: 7px 10px;
+				width: 7px;
+				height: 10px;
+				mask-image: url('../../assets/icons/arrowRight.svg');
+				background-color: $white;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%) translateX(0);
+				position: absolute;
+				animation-duration: 1s;
+				animation-timing-function: ease-in-out;
+			}
+		}
+
+		p {
+			display: inline-block;
+			line-height: 1;
+			transition: 0.2s ease-in-out;
+			color: $text;
+		}
+
+		&:hover {
+			p {
+				color: $white;
+			}
+
+			.icon {
+				span {
+					animation-name: arrow-move;
+					animation-iteration-count: infinite;
+				}
+			}
+		}
+	}
+
+	&.secondary {
+		background-color: $black;
+		color: $white;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		transition: 0.2s ease-in-out;
+
+		p {
+			color: $secondaryBlue;
+			font-size: 1.4rem;
+			line-height: 1.4rem;
+			font-weight: 400;
+			text-transform: capitalize;
+			position: relative;
+			top: -1px;
+			transition: 0.2s ease-in-out;
+		}
+
+		.icon {
+			position: relative;
+			width: 20px;
+			height: 20px;
+			transition: 0.2s ease-out;
+			min-width: 20px;
+			margin-right: 20px;
+
+			&::after {
+				content: '';
+				display: inline-block;
+				mask-size: 20px 20px;
+				width: 20px;
+				height: 20px;
+				background-color: rgba(255, 255, 255, 0.2);
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				position: absolute;
+				transition: 0.2s ease-in-out;
+			}
+
+			&.spotify::after {
+				mask-image: url('../../assets/icons-new/spotify.svg');
+			}
+
+			&.github::after {
+				mask-image: url('../../assets/icons-new/github.svg');
+			}
+
+			&.chess::after {
+				mask-image: url('../../assets/icons-new/chess.svg');
+			}
+
+			&.goodreads::after {
+				mask-image: url('../../assets/icons-new/goodreads.svg');
+			}
+
+			&.youtube::after {
+				mask-image: url('../../assets/icons-new/youtube.svg');
+			}
+
+			&.instagram::after {
+				mask-image: url('../../assets/icons-new/instagram.svg');
+			}
+		}
+
+		&:hover {
+			border: 1px solid $primaryBlue;
+
+			p {
+				color: $white;
+			}
+
+			.icon {
+				&::after {
+					background-color: $white;
+				}
+			}
+		}
+	}
+
 	&.tertiary {
 		padding: 0;
 		border: none;
 		border-radius: 0;
-		padding-top: 3px;
+		display: flex;
+		align-items: center;
 	}
 
 	&.back {
@@ -25,35 +157,39 @@
 		color: $text;
 		text-transform: initial;
 		outline: none;
+		display: flex;
+		align-items: center;
+		height: 23px;
 
 		.icon {
 			margin-left: 0;
-			margin-right: 10px;
+			margin-right: 12px;
 			transform: rotate(180deg);
+
+			span {
+				left: calc(50% + 1px);
+			}
 		}
 	}
+}
 
-	.icon {
-		width: 14px;
-		height: 14px;
-		border-radius: 4px;
-		display: inline-block;
-		background-color: $primaryBlue;
-		top: 2px;
-		position: relative;
-		margin-left: 18px;
-
-		span {
-			display: inline-block;
-			mask-size: 7px 10px;
-			width: 7px;
-			height: 10px;
-			mask-image: url('../../assets/icons/arrowRight.svg');
-			background-color: $white;
-			left: calc(50% + 1px);
-			top: 50%;
-			transform: translate(-50%, -50%);
-			position: absolute;
-		}
+@keyframes arrow-move {
+	0% {
+		transform: translate(-50%, -50%) translateX(0);
+	}
+	48% {
+		transform: translate(-50%, -50%) translateX(12px);
+	}
+	49% {
+		opacity: 0;
+	}
+	51% {
+		transform: translate(-50%, -50%) translateX(-12px);
+	}
+	52% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-50%, -50%) translateX(0px);
 	}
 }

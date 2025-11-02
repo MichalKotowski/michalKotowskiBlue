@@ -54,7 +54,7 @@ const Writings = ({
 		<div className={styles.writings}>
 			{displayHeading && (
 				<div className={styles.heading}>
-					<h2>Latest writings</h2>
+					<h2>Recent writings</h2>
 					<Button type="tertiary" label="View all" path="/writings" />
 				</div>
 			)}

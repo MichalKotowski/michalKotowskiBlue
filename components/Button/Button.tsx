@@ -5,10 +5,10 @@ import Link from 'next/link'
 import styles from './Button.module.scss'
 
 interface Button {
-	type: string,
-	label: string,
-	path: string,
-	target?: string,
+	type: string
+	label: string
+	path: string
+	target?: string
 }
 
 const Button = ({ type, label, path, target = undefined }: Button) => {
@@ -21,12 +21,12 @@ const Button = ({ type, label, path, target = undefined }: Button) => {
 			target={target}
 			onNavigate={(event) => onNavigate(event, path)}
 		>
-			{type === 'back' && (
-				<div className={styles.icon}>
+			{(type === 'back' || type === 'secondary') && (
+				<div className={`${styles.icon} ${styles[label]}`}>
 					<span></span>
 				</div>
 			)}
-			{label}
+			<p>{label}</p>
 			{type === 'tertiary' && (
 				<div className={styles.icon}>
 					<span></span>
