@@ -40,6 +40,11 @@ const Page = async ({ params }) => {
 				)
 			},
 		},
+		renderText: (text) => {
+			return text.split('\n').reduce((children, segment, index) => {
+				return [...children, index > 0 && <br key={index} />, segment]
+			}, [])
+		},
 		renderNode: {
 			[BLOCKS.PARAGRAPH]: (node, children) => <div>{children}</div>,
 			[BLOCKS.QUOTE]: (node, children) => <blockquote>{children}</blockquote>,
