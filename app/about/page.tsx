@@ -70,7 +70,7 @@ const Page = () => (
 				target="_blank"
 			/>
 			<Button
-				path="https://www.youtube.com/@kitku420"
+				path="https://www.youtube.com/@kocie420"
 				label="youtube"
 				type="secondary"
 				target="_blank"
