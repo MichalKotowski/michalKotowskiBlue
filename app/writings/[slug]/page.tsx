@@ -27,8 +27,15 @@ const Page = async ({ params }) => {
 	const options = {
 		renderMark: {
 			[MARKS.CODE]: (code) => {
+				const text = Array.isArray(code)
+					? code.reduce((acc, curr) => {
+							if (typeof curr === 'string') return acc + curr
+							if (curr && typeof curr === 'object') return acc + '\n'
+							return acc
+					  }, '')
+					: code
 				const markup = {
-					__html: hljs.highlight(code, { language: 'javascript' }).value,
+					__html: hljs.highlight(text, { language: 'javascript' }).value,
 				}
 
 				return (
