@@ -135,7 +135,8 @@ article {
 		max-width: calc(100vw - 40px);
 	}
 
-	& > div {
+	& > div,
+	& > ul > li > div {
 		@include paragraph;
 	}
 
@@ -143,8 +144,14 @@ article {
 	div + ul,
 	ul + div,
 	div + blockquote,
-	blockquote + div {
+	blockquote + div,
+	h3 + div {
 		margin-top: 20px;
+	}
+
+	div + h3,
+	ul + h3 {
+		margin-top: 40px;
 	}
 
 	pre {
@@ -178,6 +185,10 @@ h1 {
 }
 
 h2 {
+	@include secondaryHeading;
+}
+
+h3 {
 	@include secondaryHeading;
 }
 
