@@ -43,7 +43,7 @@ export const socialItems: SocialItem[] = [
 		icon: 'goodreads',
 	},
 	{
-		href: 'https://www.youtube.com/@kitku420',
+		href: 'https://www.youtube.com/@kocie420',
 		icon: 'youtube',
 	},
 	{
