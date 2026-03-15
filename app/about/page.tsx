@@ -52,7 +52,7 @@ const Page = () => (
 				target="_blank"
 			/>
 			<Button
-				path="https://www.chess.com/member/ikocie"
+				path="https://www.chess.com/member/kocie420"
 				label="chess"
 				type="secondary"
 				target="_blank"
