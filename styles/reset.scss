@@ -145,7 +145,10 @@ article {
 	ul + div,
 	div + blockquote,
 	blockquote + div,
-	h3 + div {
+	h3 + div,
+	li + li,
+	div + ol,
+	ol + div {
 		margin-top: 20px;
 	}
 
