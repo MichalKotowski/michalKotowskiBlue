@@ -27,19 +27,19 @@ const Page = () => (
 		<h1>Hello, World!</h1>
 		<Spacer size="medium" />
 		<p>
-			I’m <strong>Michał Kotowski</strong>, a product-minded engineer based in
-			Warsaw. Before software, I worked in graphic design. That's why I obsess
-			over thoughtful web interfaces, solid typographic hierarchy, and those
-			little browser interactions that make you stop and think,{' '}
-			<i>"someone really cared about making this"</i>
+			I&#39;m <strong>Michał Kotowski</strong>, a product-minded engineer based
+			in Warsaw. Before software, I worked in graphic design. That's why I
+			obsess over thoughtful web interfaces, solid typographic hierarchy, and
+			those little browser interactions that make you stop and think,{' '}
+			<i>&#34;someone really cared about making this&#34;</i>
 		</p>
 		<Spacer size="medium" />
 		<p>
-			Having reached financial independence early, I’m able to spend my 30s
+			Having reached financial independence early, I&#39;m able to spend my 30s
 			living simply and at my own pace. Most of my days are split between making
-			music, tinkering with code, and diving down rabbit holes - whether that’s
-			markets, tech, deep-dive Substacks, or whatever book is currently on my
-			desk
+			music, tinkering with code, and diving down rabbit holes - whether
+			that&#39;s markets, tech, deep-dive Substacks, or whatever book is
+			currently on my desk
 		</p>
 		<Spacer size="medium" />
 		<p>
