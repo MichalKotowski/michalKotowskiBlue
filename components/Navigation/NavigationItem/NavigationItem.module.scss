@@ -13,7 +13,7 @@
 		height: 40px;
 		margin-right: 12px;
 		border-radius: 4px;
-		transition: 0.2s ease-out;
+		transition: 0.2s ease-in-out;
 
 		&::after {
 			content: '';
@@ -21,12 +21,11 @@
 			mask-size: 24px 24px;
 			width: 24px;
 			height: 24px;
-			background-color: $white;
+			background-color: $inactiveIcon;
 			left: 50%;
 			top: 50%;
 			transform: translate(-50%, -50%);
 			position: absolute;
-			opacity: 0.6;
 			transition: 0.2s ease-in-out;
 		}
 
@@ -50,22 +49,23 @@
 	p {
 		@include paragraph;
 		line-height: 1.6rem;
-		color: $white;
-		opacity: 0.7;
+		color: $text;
 		transition: 0.2s ease-in-out;
 		user-select: none;
+		text-box-trim: trim-both;
+		text-box-edge: cap alphabetic;
 	}
 
 	@include min(981px) {
 		&:hover {
 			span {
 				&::after {
-					opacity: 1;
+					background-color: $white;
 				}
 			}
 
 			p {
-				opacity: 1;
+				color: $white;
 			}
 		}
 	}
@@ -80,7 +80,7 @@
 			}
 
 			&::after {
-				opacity: 1;
+				background-color: $white;
 				@include max(980px) {
 					background-color: $primaryBlue;
 				}
@@ -88,7 +88,7 @@
 		}
 
 		p {
-			opacity: 1;
+			color: $white;
 		}
 	}
 }

@@ -44,6 +44,8 @@
 	font-weight: 600;
 	line-height: 1.6rem;
 	text-decoration: none;
+	text-box-trim: trim-both;
+	text-box-edge: cap alphabetic;
 }
 
 @mixin paragraph {
@@ -61,6 +63,8 @@
 	line-height: 1.2rem;
 	font-weight: 600;
 	text-decoration: none;
+	text-box-trim: trim-both;
+	text-box-edge: cap alphabetic;
 }
 
 @mixin largePill {

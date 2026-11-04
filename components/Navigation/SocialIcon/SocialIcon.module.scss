@@ -6,7 +6,7 @@
 	height: 40px;
 	border-radius: 4px;
 	background-color: $darkGrey;
-	transition: background-color 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
 
 	&:not(:last-child) {
 		margin-right: 10px;
@@ -17,8 +17,8 @@
 		mask-size: 24px 24px;
 		height: 24px;
 		width: 24px;
-		background-color: $white;
-		opacity: 0.6;
+		background-color: $inactiveIcon;
+		transition: 0.2s ease-in-out;
 
 		&.github {
 			mask-image: url('../../../assets/icons-new/github.svg');
@@ -41,16 +41,12 @@
 		}
 	}
 
-	&:active {
-		transform: scale(0.97);
-	}
-
 	@include min(981px) {
 		&:hover {
 			background-color: $primaryBlue;
 
 			span {
-				opacity: 1;
+				background-color: $white;
 			}
 		}
 	}

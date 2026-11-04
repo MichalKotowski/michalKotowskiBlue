@@ -86,6 +86,8 @@
 			font-size: 12px !important;
 			line-height: 16px !important;
 			color: $text;
+			text-box-trim: initial;
+			text-box-edge: initial;
 
 			strong {
 				color: $white;
@@ -93,6 +95,14 @@
 
 			span {
 				color: $primaryBlue;
+			}
+		}
+
+		&.isIdle {
+			p {
+				color: $textMuted;
+				text-box-trim: trim-both;
+				text-box-edge: cap alphabetic;
 			}
 		}
 	}

@@ -13,33 +13,39 @@ export const metadata = {
 const Page = () => (
 	<>
 		<Spacer size="top" />
-		<Image
-			quality={100}
-			src={heroImage}
-			alt="Michal Kotowski"
-			width={1120}
-			height={500}
-			placeholder="blur"
-		/>
+		<div className="temporaryImageWrapper">
+			<Image
+				quality={100}
+				src={heroImage}
+				alt="Michal Kotowski"
+				width={1120}
+				height={500}
+				placeholder="blur"
+			/>
+		</div>
 		<Spacer size="large" />
 		<h1>Hello, World!</h1>
 		<Spacer size="medium" />
 		<p>
-			I&apos;m <strong>Michał Kotowski</strong>, a software engineer from Warsaw
-			with a passion for crafting digital experiences. Whether I&apos;m writing
-			code, brainstorming ideas, or refining design systems, I take joy in
-			building things that are both functional and beautiful
+			I’m <strong>Michał Kotowski</strong>, a product-minded engineer based in
+			Warsaw. Before software, I worked in graphic design. That's why I obsess
+			over thoughtful web interfaces, solid typographic hierarchy, and those
+			little browser interactions that make you stop and think,{' '}
+			<i>"someone really cared about making this"</i>
 		</p>
 		<Spacer size="medium" />
 		<p>
-			Beyond the screen, I&apos;m deeply curious about the human mind -
-			particularly how mindfulness influences us and what drives our behavior,
-			especially in the context of status games
+			Having reached financial independence early, I’m able to spend my 30s
+			living simply and at my own pace. Most of my days are split between making
+			music, tinkering with code, and diving down rabbit holes - whether that’s
+			markets, tech, deep-dive Substacks, or whatever book is currently on my
+			desk
 		</p>
 		<Spacer size="medium" />
 		<p>
-			I’m incredibly grateful for where I am today and excited about what’s
-			ahead, thanks for stopping by!
+			This space is where I capture what I learn along the way.
+			<br />
+			Thanks for stopping by!
 		</p>
 		<Spacer size="huge" />
 		<h2>Find me elsewhere</h2>

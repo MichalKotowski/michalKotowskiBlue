@@ -9,8 +9,10 @@
 
 	.label {
 		@include pill;
-		color: $text;
+		color: $textMuted;
 		min-width: 70px;
+		text-box-trim: initial;
+		text-box-edge: initial;
 	}
 
 	.separator {
@@ -30,6 +32,8 @@
 		@include pill;
 		color: $white;
 		font-weight: 600;
+		text-box-trim: initial;
+		text-box-edge: initial;
 
 		@include max(600px) {
 			margin-top: 15px;

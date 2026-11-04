@@ -87,7 +87,7 @@ const CurrentlyPlaying = () => {
 					key="not-playing"
 				>
 					<div className={styles.spotify}></div>
-					<div className={styles.text}>
+					<div className={`${styles.text} ${styles.isIdle}`}>
 						<p>Spotify playback is idle</p>
 					</div>
 				</motion.div>

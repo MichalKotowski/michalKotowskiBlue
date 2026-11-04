@@ -3,6 +3,11 @@
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 24px;
+
+		h2 {
+			text-box-trim: trim-both;
+			text-box-edge: cap alphabetic;
+		}
 	}
 
 	.noResults {
@@ -25,7 +30,7 @@
 		}
 
 		.content {
-			margin: 4px 0;
+			margin: 5px 0;
 			width: 100%;
 
 			span {
@@ -40,7 +45,10 @@
 
 				p {
 					@include date;
-					color: $text;
+					text-box-trim: trim-start;
+					text-box-edge: cap alphabetic;
+					margin-top: 1px;
+					color: $textMuted;
 				}
 			}
 
