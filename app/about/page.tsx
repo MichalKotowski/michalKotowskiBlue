@@ -43,10 +43,11 @@ const Page = () => (
 		</p>
 		<Spacer size="medium" />
 		<p>
-			This space is where I capture what I learn along the way.
+			This space is where I capture what I learn along the way
 			<br />
 			Thanks for stopping by!
 		</p>
+		<Spacer size="medium" />
 		<Spacer size="huge" />
 		<h2>Find me elsewhere</h2>
 		<Spacer size="medium" />
