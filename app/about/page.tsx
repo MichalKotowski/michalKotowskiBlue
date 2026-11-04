@@ -28,7 +28,7 @@ const Page = () => (
 		<Spacer size="medium" />
 		<p>
 			I&#39;m <strong>Michał Kotowski</strong>, a product-minded engineer based
-			in Warsaw. Before software, I worked in graphic design. That's why I
+			in Warsaw. Before software, I worked in graphic design. That&#39;s why I
 			obsess over thoughtful web interfaces, solid typographic hierarchy, and
 			those little browser interactions that make you stop and think,{' '}
 			<i>&#34;someone really cared about making this&#34;</i>
